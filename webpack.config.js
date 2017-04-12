@@ -364,6 +364,9 @@ var config = {
             },
           }
         }),
+        new CopyPlugin([
+            { from: '../../../../node_modules/angular-i18n/', to: '../libs/angular-i18n/' }
+        ]),
     ],
     watch: false
 };

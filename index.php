@@ -17,6 +17,8 @@
   <!-- js -->
   <script rel="preload" src="./local/templates/.default/assets/vendor.js?<?php echo time()?>" type="text/javascript" charset="utf-8"></script>
   <script rel="preload" src="./local/templates/.default/assets/bundle.js?<?php echo time()?>" type="text/javascript" charset="utf-8"></script>
+  <!-- different locale for en -->
+  <script rel="preload" src="./local/templates/.default/libs/angular-i18n/angular-locale_ru.js"></script>
   <!-- eof js -->
 </head>
 

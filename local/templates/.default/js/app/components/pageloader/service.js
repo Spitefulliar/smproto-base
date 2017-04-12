@@ -1,5 +1,5 @@
 //SERVICE
-export default ['$http', '$rootScope', 
+export default ['$http', '$rootScope',
   function($http, $rootScope,) {
     let service = {};
 
@@ -19,6 +19,7 @@ export default ['$http', '$rootScope',
           return response.data;
         }, function(response) {
           console.warn("can't get page data");
+          return;
       });
     };
 
@@ -31,7 +32,7 @@ export default ['$http', '$rootScope',
       //single for real background declaration
       if(single) {
         return gradientTpl[2];
-      } else { 
+      } else {
         return gradientTpl;
       };
     }
@@ -40,7 +41,7 @@ export default ['$http', '$rootScope',
       if (!rawStyle) return false;
       let styleObj = {
         'color': rawStyle.textColor,
-        'background-color': rawStyle.bgColor, 
+        'background-color': rawStyle.bgColor,
         'background-image': (rawStyle.bgImage)? ('url(' + ($rootScope.isDesktop && rawStyle.bgImage.desktop || rawStyle.bgImage.mobile) + ')') : false,
         'background': (rawStyle.bgGradient)? makeVerticalGradient(rawStyle.bgGradient.top,rawStyle.bgGradient.col1, rawStyle.bgGradient.col2, true) : false,
       }
