@@ -1,0 +1,75 @@
+/* ==========================================================================
+   fonts
+   ========================================================================== */
+
+@font-face {
+    font-family: 'robotoblack';
+    src: url($fontspath + '/Roboto/roboto-black.eot');
+    src: url($fontspath + '/Roboto/roboto-black.eot?#iefix') format('embedded-opentype'),
+         url($fontspath + '/Roboto/roboto-black.woff2') format('woff2'),
+         url($fontspath + '/Roboto/roboto-black.woff') format('woff'),
+         url($fontspath + '/Roboto/roboto-black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotobold';
+    src: url($fontspath + '/Roboto/roboto-bold.eot');
+    src: url($fontspath + '/Roboto/roboto-bold.eot?#iefix') format('embedded-opentype'),
+         url($fontspath + '/Roboto/roboto-bold.woff2') format('woff2'),
+         url($fontspath + '/Roboto/roboto-bold.woff') format('woff'),
+         url($fontspath + '/Roboto/roboto-bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'robotolight';
+    src: url($fontspath + '/Roboto/roboto-light.eot');
+    src: url($fontspath + '/Roboto/roboto-light.eot?#iefix') format('embedded-opentype'),
+         url($fontspath + '/Roboto/roboto-light.woff2') format('woff2'),
+         url($fontspath + '/Roboto/roboto-light.woff') format('woff'),
+         url($fontspath + '/Roboto/roboto-light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotomedium';
+    src: url($fontspath + '/Roboto/roboto-medium.eot');
+    src: url($fontspath + '/Roboto/roboto-medium.eot?#iefix') format('embedded-opentype'),
+         url($fontspath + '/Roboto/roboto-medium.woff2') format('woff2'),
+         url($fontspath + '/Roboto/roboto-medium.woff') format('woff'),
+         url($fontspath + '/Roboto/roboto-medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url($fontspath + '/Roboto/roboto-regular.eot');
+    src: url($fontspath + '/Roboto/roboto-regular.eot?#iefix') format('embedded-opentype'),
+         url($fontspath + '/Roboto/roboto-regular.woff2') format('woff2'),
+         url($fontspath + '/Roboto/roboto-regular.woff') format('woff'),
+         url($fontspath + '/Roboto/roboto-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'robotothin';
+    src: url($fontspath + '/Roboto/roboto-thin.eot');
+    src: url($fontspath + '/Roboto/roboto-thin.eot?#iefix') format('embedded-opentype'),
+         url($fontspath + '/Roboto/roboto-thin.woff2') format('woff2'),
+         url($fontspath + '/Roboto/roboto-thin.woff') format('woff'),
+         url($fontspath + '/Roboto/roboto-thin.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+/* eof fonts */

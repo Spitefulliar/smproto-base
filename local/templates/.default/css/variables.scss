@@ -1,0 +1,66 @@
+//utils
+// $images: "./../dist/img";
+// $fontspath: "./../dist/fonts";
+$images: "./../img";
+$fontspath: "./../fonts";
+$imgslg: "/desktop";
+$imgssm: "/tablet";
+$imgsxs: "/mobile";
+
+$mult: 2; //multiplier for previously written elements
+
+//font families
+$fflight: 'robotolight', 'Helvetica Neue', sans-serif !default;
+$ffthin: 'robotothin', 'Helvetica Neue', sans-serif !default;
+$ffreg: 'robotoregular', 'Helvetica Neue', sans-serif !default;
+$ffmd: 'robotomedium', 'Helvetica Neue', sans-serif !default;
+$ffbold: 'robotobold', 'Helvetica Neue', sans-serif !default;
+
+$ffbtn : $ffmd;
+
+//font-sizes
+$fsh1: 72px !default;
+$fsh2: 36px !default;
+$fsh3: 24px !default;
+
+$fslg: 18px !default;
+$fsmd: 15px !default;
+$fstxt: 13px !default;
+$fssm: 11px !default;
+$fsxs: 9px !default;
+$fsbtn: $fslg !default;
+
+$lhtxt: 1.45;
+$lhreg: 1.11;
+
+//dimentions
+$contentmh: 100vh;
+
+//dimentions
+$contentmh: 100vh;
+$tbheight: 32px * $mult;
+$tbpad: 4px * $mult;
+$navbarh: $tbheight - $tbpad * $mult;
+
+$elbr: 0px * $mult !default;
+
+$conpad: 33.5px * $mult !default;
+$content-mw: 512px * $mult !default;
+
+
+//layout breakpoints
+$lbrp-lg:     1280px !default;
+$lbrp-md:     1024px !default;
+$lbrp-sm:     960px !default;
+$lbrp-xs:     599px !default;
+$lbrp-xxs:     374px !default;
+
+//colors
+$white: #ffffff;
+$black: #000000;
+
+
+//main colors
+$bg: $white;
+$border: lightgrey;
+$brand: $black;

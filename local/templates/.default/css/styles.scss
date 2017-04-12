@@ -1,0 +1,351 @@
+@import 'variables.scss';
+@import 'fonts.scss';
+@import 'mixins.scss';
+@import 'functions.scss';
+@import 'animations.scss';
+
+
+  /* ==========================================================================
+     elements
+     ========================================================================== */
+
+body {
+  background: $white;
+  font-family: $ffreg;
+  font-size: $fstxt;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+
+a {
+  &, &:visited, &:hover, &:focus {
+    text-decoration: none;
+  }
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+.svg-icon {
+  margin: 0;
+  background-repeat: no-repeat no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  height: 1em;
+  max-width: 1em;
+  line-height: 1em;
+  svg {
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+    fill: currentColor;
+  }
+}
+
+.logo {
+  cursor: pointer;
+  display: inline-block;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: $white;
+  }
+}
+
+.social-icon {
+  @extend .svg-icon;
+  @include link-text();
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 12px;
+  color: $white;
+  cursor: pointer;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+  -webkit-transition: color 400ms ease;
+     -moz-transition: color 400ms ease;
+      -ms-transition: color 400ms ease;
+       -o-transition: color 400ms ease;
+          transition: color 400ms ease;
+
+  &_fb:hover {
+    color: #3d5a98;
+  }
+  &_vk:hover {
+    color: #4c75a3;
+  }
+  &_ok:hover {
+    color: #ff9600;
+  }
+  &_tw:hover {
+    color: #2aa9e0;
+  }
+  &_gplus:hover {
+    color: #dc4a38;
+  }
+  &_linkedin:hover {
+    color: #0077b5;
+  }
+}
+
+
+// buttons
+
+.btn,
+md-button.btn {
+  overflow: visible;
+  position: relative;
+  margin: 0;
+  font-family: $ffbtn;
+  font-size: $fsbtn;
+  color: $white;
+  border: 1px solid transparent;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  &.disabled,
+  &:disabled {
+    opacity: 0.3;
+    cursor: default !important;
+  }
+
+  &.btn {
+
+  }
+
+  .svg-icon {
+    vertical-align: text-top;
+  }
+}
+
+//scrollbar
+.scroller {
+  padding-right: 18px;
+  margin-right: -18px;
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    &__x {
+      width: 100%;
+    }
+  }
+  &__track_v {
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: none;
+    opacity: 1;
+  }
+  &__bar_v {
+    right: -3px;
+    width: 6px;
+    -webkit-border-radius: 0px;
+            border-radius: 0px;
+    background: $white;
+    opacity: 0.4;
+    cursor: pointer;
+  }
+
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar-button,
+  &::-webkit-scrollbar-track,
+  &::-webkit-scrollbar-thumb,
+  &::-webkit-scrollbar-corner,
+  &::-webkit-resizer,
+  { /* for Mac OS X support */
+      width: 0;
+      height: 0;
+      display: none;
+  }
+}
+
+.badge {
+  $h: 16px;
+  display: inline-block;
+  padding: 0 2px;
+  color: $white;
+  min-width: $h;
+  height: $h;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  font-family: $ffmd;
+  font-size: $fssm;
+  line-height: $h;
+  background: $brand;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+//forms
+.form {
+  $bra: 2px;
+  &_vertical {
+    .input-container_white {
+      border-top: 1px solid $border;
+      &:first-of-type {
+        border-top: none;
+      -webkit-border-top-left-radius: $bra;
+              border-top-left-radius: $bra;
+      -webkit-border-top-right-radius: $bra;
+              border-top-right-radius: $bra;
+      }
+      &:last-of-type {
+        -webkit-border-bottom-left-radius: $bra;
+                border-bottom-left-radius: $bra;
+        -webkit-border-bottom-right-radius: $bra;
+                border-bottom-right-radius: $bra;
+      }
+      input.md-input,
+      input[type="text"].md-input,
+      input[type="password"].md-input,
+      input[type="email"].md-input {
+        &:-webkit-autofill {
+          &:first-of-type {
+          -webkit-border-top-left-radius: $bra;
+                  border-top-left-radius: $bra;
+          -webkit-border-top-right-radius: $bra;
+                  border-top-right-radius: $bra;
+          }
+          &:last-of-type {
+            -webkit-border-bottom-left-radius: $bra;
+                    border-bottom-left-radius: $bra;
+            -webkit-border-bottom-right-radius: $bra;
+                    border-bottom-right-radius: $bra;
+          }
+        }
+      }
+    }
+    .md-custom.md-button {
+      display: block;
+      width: 100%;
+      height: 46px;
+      margin-top: 17px;
+      -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;
+              box-sizing: border-box;
+    }
+  }
+}
+.input-container_white {
+  $bra: 2px;
+  background: $white;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+
+  label:not(.md-no-float):not(.md-container-ignore),
+  .md-placeholder {
+    font-family: $ffmd;
+    padding-left: 16px;
+    -webkit-transform: translate3d(0, 40px, 0) scale(1);
+       -moz-transform: translate3d(0, 40px, 0) scale(1);
+        -ms-transform: translate3d(0, 40px, 0) scale(1);
+         -o-transform: translate3d(0, 40px, 0) scale(1);
+            transform: translate3d(0, 40px, 0) scale(1);
+  }
+  &.md-input-focused label:not(.md-no-float),
+  &.md-input-has-placeholder label:not(.md-no-float),
+  &.md-input-has-value label:not(.md-no-float) {
+    -webkit-transform: translate3d(0, 22px, 0) scale(0.75);
+       -moz-transform: translate3d(0, 22px, 0) scale(0.75);
+        -ms-transform: translate3d(0, 22px, 0) scale(0.75);
+         -o-transform: translate3d(0, 22px, 0) scale(0.75);
+            transform: translate3d(0, 22px, 0) scale(0.75);
+  }
+  input.md-input,
+  input[type="text"].md-input,
+  input[type="password"].md-input,
+  input[type="email"].md-input {
+    display: block;
+    height: 47px;
+    width: 100%;
+    max-width: 100%;
+    padding: 23px 16px 8px;
+    border-bottom: none;
+    color: $black;
+    line-height: 16px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .md-errors-spacer {
+    display: none;
+  }
+}
+// eof forms
+
+/* eof elements */
+
+/* ==========================================================================
+   main styles
+   ========================================================================== */
+*:focus, *:active {
+  outline: none;
+}
+
+html {
+  min-height: 100%;
+}
+body {
+  min-height: 100%;
+  height: auto;
+  position: relative;
+  -ms-overflow-x: hidden;
+      overflow-x: hidden;
+  background: $bg;
+  color: $black;
+}
+
+.content {
+  overflow: visible;
+  min-height: $contentmh;
+}
+
+.container {
+  max-width: $content-mw;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  &_padded {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $content-mw;
+    padding: 0 $conpad;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+
+
+
+/* eof main styles */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

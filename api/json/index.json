@@ -1,0 +1,9 @@
+{
+  "success": "true",
+  "page": {
+    "id": 1,
+    "code": "index",
+    "title": "Index page",
+    "defaultProp": "Index <br>page"
+  }
+}

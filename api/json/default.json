@@ -1,0 +1,9 @@
+{
+  "success": "true",
+  "page": {
+    "id": 1,
+    "code": "default",
+    "title": "Default page",
+    "defaultProp": "Default <br>page"
+  }
+}
