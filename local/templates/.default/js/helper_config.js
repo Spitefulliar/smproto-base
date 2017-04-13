@@ -8,7 +8,5 @@ export const APP  = {
   VIEWS_DIR: '../',
   API_DIR: '/api/json/',
   API_POSTFIX: '.json',
-  ENV:{
-    LOCALE: "ru-ru",
-  }
+  DICTIONARIESPATH: "/local/templates/.default/js/app/dictionaries/dictionary_"
 };

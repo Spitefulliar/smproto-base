@@ -1,3 +1,3 @@
-export default  {  
-  name: 'Pageloader',
+export default  {
+  NAME: 'Pageloader',
 };
