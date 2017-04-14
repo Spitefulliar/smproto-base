@@ -1,13 +1,11 @@
 'use strict';
 
-const PAGE_NAME = moduleConfig.name;
-// const Routing = require('./route');
+import MODULE_CONFIG from './config';
 import Routing from './route';
 import Controller from './controller';
-import moduleConfig from './config';
 
 
 export default angular
-  .module(CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX, ['ui.router'])
+  .module(MODULE_CONFIG.MODULE_NAME, ['ui.router'])
   .config(Routing)
-  .controller(CONFIG.APP.PREFIX + PAGE_NAME + CONFIG.APP.PAGE_POSTFIX + CONFIG.APP.CONTROLLER_POSTFIX, Controller);
+  .controller(MODULE_CONFIG.CONTROLLER_NAME, Controller);

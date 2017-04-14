@@ -10,7 +10,7 @@ const PAGE_URL = moduleConfig.url || '/' + PAGE_STATE + '/';
 const PAGE_TITLE = moduleConfig.title || false;
 const PAGE_API_PARAM = moduleConfig.apiParam || PAGE_STATE;
 
-var routing = ['$stateProvider', '$urlRouterProvider', 
+var routing = ['$stateProvider', '$urlRouterProvider',
 function($stateProvider, $urlRouterProvider) {
     $stateProvider
     .state(PAGE_STATE, {
