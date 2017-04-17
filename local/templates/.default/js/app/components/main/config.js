@@ -1,3 +1,4 @@
+//@flow
 import { Config } from './../../helpers/config';
 
 const MODULE_CONFIG = new Config({
