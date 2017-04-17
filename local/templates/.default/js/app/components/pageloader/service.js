@@ -1,70 +1,43 @@
+import MODULE_CONFIG from './config';
+
 //SERVICE
-export default ['$http', '$rootScope', 
-  function($http, $rootScope,) {
+export default ['$http', '$rootScope',
+  function($http, $rootScope) {
     let service = {};
 
-    service.getPage = function(apiurl, code) {
-      let qData = {
-        code: code
-      };
+    service.fetchPage = function(apiurl, qData = {}) {
       return $http({
         method: 'GET',
         url: apiurl + '?' + $.param(qData),
       }).then(function(response) {
-          //if there are typycal page sections, transform  them
-          if (response.data.page && response.data.page.sections) {
-            response.data.page.sections = service.sectionsCommonTranform(response.data.page.sections);
-          }
 
           return response.data;
+
         }, function(response) {
+
           console.warn("can't get page data");
+          return;
       });
     };
 
+    service.loadPage = async function($scope, $stateParams) {
+      const { pageData } = $rootScope;
 
-    let makeVerticalGradient = function (top,col1,col2,single) {
-      let gradientTpl = [];
-      gradientTpl[0] = `-moz-linear-gradient(${(top)? 'top':'bottom'}, ${col1}, ${col2})`;
-      gradientTpl[1] = `-webkit-linear-gradient(${(top)? 'top':'bottom'}, ${col1}, ${col2})`;
-      gradientTpl[2] = `linear-gradient(${(top)? 'to bottom':'to top'}, ${col1}, ${col2})`;
-      //single for real background declaration
-      if(single) {
-        return gradientTpl[2];
-      } else { 
-        return gradientTpl;
-      };
-    }
+      if (!pageData.PAGE_LOADER) return;
 
-    service.defaultStyleTranform = function(rawStyle){
-      if (!rawStyle) return false;
-      let styleObj = {
-        'color': rawStyle.textColor,
-        'background-color': rawStyle.bgColor, 
-        'background-image': (rawStyle.bgImage)? ('url(' + ($rootScope.isDesktop && rawStyle.bgImage.desktop || rawStyle.bgImage.mobile) + ')') : false,
-        'background': (rawStyle.bgGradient)? makeVerticalGradient(rawStyle.bgGradient.top,rawStyle.bgGradient.col1, rawStyle.bgGradient.col2, true) : false,
+      let urlPostfix = (CONFIG.APP.API_POSTFIX && (pageData.PAGE_API_PARAM.indexOf(CONFIG.APP.API_POSTFIX) == -1))? CONFIG.APP.API_POSTFIX : '';
+      try {
+        service.fetchPage(CONFIG.APP.API_DIR + pageData.PAGE_API_PARAM + urlPostfix, $stateParams ).then(function(response){
+          if (!response || !response.page) throw new Error('No page provided in page data');
+          $scope.page = response.page;
+          $scope.pageData.title = $scope.page.title || $scope.pageData.title;
+          $rootScope.$broadcast('pageDataLoaded');
+        });
+      } catch (e) {
+        console.warn(e.message);
+        return;
       }
-      if (rawStyle.bgGradient) rawStyle.bgGradientRule = makeVerticalGradient(rawStyle.bgGradient.top,rawStyle.bgGradient.col1, rawStyle.bgGradient.col2);
-      return [rawStyle,styleObj];
     }
-
-    service.sectionsCommonTranform = function(sections){
-      let tmpSections = sections;
-      let tmpStyle;
-      for (var i = tmpSections.length - 1; i >= 0; i--) {
-        let section = tmpSections[i];
-        tmpStyle = service.defaultStyleTranform(section.style);
-        section.style = tmpStyle[0];
-        section.commonStyle = tmpStyle[1];
-        for (var j = section.blocks.length - 1; j >= 0; j--) {
-          let block = section.blocks[j];
-          tmpStyle = service.defaultStyleTranform(block.style);
-          block.style = tmpStyle[0];
-          block.commonStyle = tmpStyle[1];
-        }
-      }
-      return tmpSections;
-    };
 
     return service;
 }];

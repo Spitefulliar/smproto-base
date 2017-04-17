@@ -364,6 +364,10 @@ var config = {
             },
           }
         }),
+        new CopyPlugin([
+            { from: '../../../../node_modules/angular-i18n/angular-locale_ru.js', to: '../libs/angular-i18n/' },
+            { from: '../../../../node_modules/angular-i18n/angular-locale_en.js', to: '../libs/angular-i18n/' },
+        ]),
     ],
     watch: false
 };

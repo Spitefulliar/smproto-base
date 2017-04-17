@@ -1,0 +1,69 @@
+{
+  "": "",
+  "found": "Found",
+  "rub": "a",
+  "eur": "€",
+  "usd": "$",
+  "roubles": "a",
+  "euro": "€",
+  "dollars": "$",
+  "msq": "M²",
+  "km": "km",
+  "Кm": "Кm",
+  "m": "m",
+  "about": {
+    "about": "about",
+    "long": "about"
+  },
+  "About": {
+    "About": "About",
+    "long": "About"
+  },
+  "Up to": "Up to",
+  "up to": "up to",
+  "From": "From",
+  "OK": {
+    "OK": "OK"
+  },
+  "Clear": {
+    "Clear": "Clear"
+  },
+  "more": {
+    "more": "more",
+    "info": "More info"
+  },
+  "hide": {
+    "hide": "hide"
+  },
+  "Search": {
+    "Search": "Search",
+    "no": "Search",
+    "todo": "Search"
+  },
+  "Sort": {
+    "Sort": "Sort",
+    "what": "Sorting",
+    "no": "Sorting",
+    "todo": "Sort"
+  },
+  "mkad": {
+    "mkad": "МКАД",
+    "in": "Inside of MRHW",
+    "out": "Outside of MRHW"
+  },
+  "find": {
+    "find": "find",
+    "todo": "find"
+  },
+  "in": "in",
+  "for": {
+    "for": "for"
+  },
+  "price": {
+    "price": "Price",
+    "total": "Total price"
+  },
+  "promo": "Promo",
+  "close": "Close",
+  "Показать еще": "Show more"
+}

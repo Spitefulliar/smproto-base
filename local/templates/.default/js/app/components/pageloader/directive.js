@@ -1,9 +1,8 @@
 //DIRECTIVE
-import moduleConfig from './config';
-const MODULE_NAME = moduleConfig.name;
+import MODULE_CONFIG from './config';
 
-export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '$stateParams', '$compile', 
-  function ($rootScope, $http, $timeout, $window, $state, $log, $stateParams, $compile) {
+export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '$stateParams', '$compile', CONFIG.APP.PREFIX + MODULE_CONFIG.NAME + CONFIG.APP.SERVICE_POSTFIX,
+  function ($rootScope, $http, $timeout, $window, $state, $log, $stateParams, $compile, $moduleService) {
     var linkFunction = function linkFunction($scope, $element, $attributes) {
       // taking a page constructor tpl to build a page, if it's a directive element
       var linkFn = (typeof $attributes.artPageloaderDir == 'string')? false : $compile(require('./template.html'));
@@ -13,20 +12,13 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '
         });
       }
 
-      let urlPostfix = (CONFIG.APP.API_POSTFIX && ($rootScope.pageData.apiParam.indexOf(CONFIG.APP.API_POSTFIX) == -1))? CONFIG.APP.API_POSTFIX : '';
-
-      $scope.getPage(CONFIG.APP.API_DIR + $rootScope.pageData.apiParam + urlPostfix, $stateParams.pageCode).then(function(response){
-        $scope.page = response.page;
-        $scope.pageData.title = $scope.page.title || $scope.pageData.title;
-        $rootScope.$broadcast('pageDataLoaded');
-        $attributes = $attributes;
-      });
+      $scope.loadPage($scope, $stateParams);
 
     };
   return {
     restrict: "AE",
     link: linkFunction,
-    controller: CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.CONTROLLER_POSTFIX,
+    controller: MODULE_CONFIG.CONTROLLER_NAME,
     // template: require('./template.html'),
     template: false,
     replace: false,

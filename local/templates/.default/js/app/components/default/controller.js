@@ -1,10 +1,9 @@
 //CONTROLLER
-import moduleConfig from './config';
-const MODULE_NAME = moduleConfig.name;
+import MODULE_CONFIG from './config';
 
-export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX, '$log', '$timeout', '$window', '$state', '$http',
+export default ['$scope', '$rootScope', MODULE_CONFIG.SERVICE_NAME, '$log', '$timeout', '$window', '$state', '$http',
   function($scope, $rootScope, $moduleService, $log, $timeout, $window, $state, $http) {
 
-  $scope[CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX] = $moduleService;
+  $scope[MODULE_CONFIG.SERVICE_NAME] = $moduleService;
 
 }];

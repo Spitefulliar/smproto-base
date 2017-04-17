@@ -1,4 +1,4 @@
-export const APP  = {  
+export const APP  = {
   NAME: 'app',
   PREFIX: 'art',
   DIRECTIVE_POSTFIX: 'Dir',
@@ -8,7 +8,5 @@ export const APP  = {
   VIEWS_DIR: '../',
   API_DIR: '/api/json/',
   API_POSTFIX: '.json',
-  "environment":{  
-    "locale":"ru-ru",
-  },
+  DICTIONARIESPATH: "/local/templates/.default/js/app/dictionaries/dictionary_"
 };
