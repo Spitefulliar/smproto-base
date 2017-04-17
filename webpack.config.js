@@ -330,7 +330,7 @@ var config = {
         new webpack.ProvidePlugin({
           //configs
           'NODE_ENV': 'NODE_ENV',
-          'CONFIG': path.join(entryPath, "/helper_config.js"),
+          'CONFIG': path.join(entryPath, "/config.js"),
           //libs
           '$': 'jquery',
           'jQuery': 'jquery',
