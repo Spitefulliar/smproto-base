@@ -1,11 +1,10 @@
 import { Config } from './../../helpers/config';
 
 const MODULE_CONFIG = new Config({
-  NAME: 'Index',
+  NAME: 'catalog',
   TYPE: 'page',
-  PAGE_URL: '/',
-  PAGE_LOADER: true,
-  PAGE_LOADER_PARAM: false
+  PAGE_URL: '/catalog{delim1:[\/]*}{category:[^/]*}{delim2:[\/]*}{subcategory:[^/]*}/',
+  PAGE_LOADER: false,
 });
 
 export default MODULE_CONFIG;
