@@ -1,13 +1,12 @@
 //CONTROLLER
-import moduleConfig from './config';
-const MODULE_NAME = moduleConfig.name;
+import MODULE_CONFIG from './config';
 
-export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX, '$location', '$log', '$timeout', '$window', '$state', '$sce', '$http',
-  // '$mdSidenav','$mdMedia', 
+export default ['$scope', '$rootScope', MODULE_CONFIG.SERVICE_NAME, '$location', '$log', '$timeout', '$window', '$state', '$sce', '$http',
+  // '$mdSidenav','$mdMedia',
   function($scope, $rootScope, $moduleService, $location, $log, $timeout, $window, $state, $sce, $http) {
-  // $mdSidenav, $mdMedia, 
+  // $mdSidenav, $mdMedia,
 
-  $scope[CONFIG.APP.PREFIX + MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX] = $moduleService;
+  $scope[MODULE_CONFIG.SERVICE_NAME] = $moduleService;
 
   //media
   // $scope.$watch(function() { return $mdMedia('gt-sm'); }, function(mquery) {
@@ -44,14 +43,9 @@ export default ['$scope', '$rootScope', CONFIG.APP.PREFIX + MODULE_NAME + CONFIG
 
   //eof sidenav
 
-  //for html binding
-  $scope.trustAsHtml = function(value) {
-    return $sce.trustAsHtml(value);
-  };
-
-  $rootScope.$on('$stateChangeSuccess', 
-    function(event, toState, toParams, fromState, fromParams){ 
-      $scope.pageData = $state.current.data;
+  $rootScope.$on('$stateChangeSuccess',
+    function(event, toState, toParams, fromState, fromParams){
+      $rootScope.pageData = $state.current.data;
     }
   );
 

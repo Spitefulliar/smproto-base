@@ -18,7 +18,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state', '$log', '
   return {
     restrict: "AE",
     link: linkFunction,
-    controller: CONFIG.APP.PREFIX + MODULE_CONFIG.NAME + CONFIG.APP.CONTROLLER_POSTFIX,
+    controller: MODULE_CONFIG.CONTROLLER_NAME,
     // template: require('./template.html'),
     template: false,
     replace: false,

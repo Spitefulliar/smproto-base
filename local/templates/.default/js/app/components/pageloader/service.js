@@ -22,8 +22,9 @@ export default ['$http', '$rootScope',
 
     service.loadPage = async function($scope, $stateParams) {
       const { pageData } = $rootScope;
-      console.log($stateParams);
+
       if (!pageData.PAGE_LOADER) return;
+
       let urlPostfix = (CONFIG.APP.API_POSTFIX && (pageData.PAGE_API_PARAM.indexOf(CONFIG.APP.API_POSTFIX) == -1))? CONFIG.APP.API_POSTFIX : '';
       try {
         service.fetchPage(CONFIG.APP.API_DIR + pageData.PAGE_API_PARAM + urlPostfix, $stateParams ).then(function(response){
