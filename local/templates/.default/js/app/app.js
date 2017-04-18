@@ -1,6 +1,3 @@
-//app
-const MODULE_NAME = 'app';
-
 //config
 import translateProvider from './providers/translateProvider.js';
 import themeProvider from './providers/themeProvider.js';
@@ -39,31 +36,42 @@ function requireAll(requireContext) {
 }
 
 //custom modules
-let AppModules = require.context('./components/', true, /^\.\/.*(module)\.js$/);
-// AppModules.keys().forEach(AppModules);
-requireAll(AppModules);
+let appComponents = require.context('./components/', true, /^\.\/.*(module)\.js$/);
+// appComponents.keys().forEach(appComponents);
+requireAll(appComponents);
 
 //pages
-let Pages = require.context('./pages/', true, /^\.\/.*(module)\.js$/);
-// Pages.keys().forEach(Pages);
-requireAll(Pages);
+let pages = require.context('./pages/', true, /^\.\/.*(module)\.js$/);
+// pages.keys().forEach(pages);
+requireAll(pages);
 
-let AppModulesArr = [];
-AppModules.keys().forEach(function(item, i, arr) {
+//services
+let services = require.context('./services/', true, /^\.\/.*(module)\.js$/);
+// services.keys().forEach(services);
+requireAll(services);
+
+let appDependenciesArr = [];
+appComponents.keys().forEach(function(item, i, arr) {
   let tmpName = item.substr(2).slice(0,-10);
   let name = CONFIG.APP.PREFIX + tmpName[0].toUpperCase() + tmpName.slice(1);
-  AppModulesArr.push(name);
+  appDependenciesArr.push(name);
 });
 
-Pages.keys().forEach(function(item, i, arr) {
+pages.keys().forEach(function(item, i, arr) {
   let tmpName = item.substr(2).slice(0,-10);
-  let name = CONFIG.APP.PREFIX + tmpName[0].toUpperCase() + tmpName.slice(1) + CONFIG.APP.PAGE_POSTFIX;
-  AppModulesArr.push(name);
+  let name = CONFIG.APP.PREFIX + CONFIG.APP.PAGE_PREFIX + tmpName[0].toUpperCase() + tmpName.slice(1);
+  appDependenciesArr.push(name);
+});
+
+services.keys().forEach(function(item, i, arr) {
+  let tmpName = item.substr(2).slice(0,-10);
+  let name = CONFIG.APP.PREFIX + CONFIG.APP.SERVICE_PREFIX + tmpName[0].toUpperCase() + tmpName.slice(1);
+  appDependenciesArr.push(name);
 });
 
 //all dependent modules
-let appModulesArr = AppModulesArr.concat([
-    // 'ngMaterial',
+appDependenciesArr = appDependenciesArr.concat([
+    'ngMaterial',
     'ngAria',
     // 'ngTouch', //not included with material
     'ui.router',
@@ -94,12 +102,11 @@ let appModulesArr = AppModulesArr.concat([
     translateHandlerLog,
     translateLoaderStaticFiles
 ]);
-// console.log(appModulesArr);
 
 
 
 //app
-var app = angular.module(MODULE_NAME, appModulesArr)
+var app = angular.module(CONFIG.APP.NAME, appDependenciesArr)
   .config(routeProvider)
   .config(translateProvider)
   .config(themeProvider)
@@ -144,4 +151,5 @@ var app = angular.module(MODULE_NAME, appModulesArr)
   ]);
 
 
-export default MODULE_NAME;
+
+export default CONFIG.APP.NAME;

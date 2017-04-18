@@ -58,9 +58,13 @@ $lbrp-xxs:     374px !default;
 //colors
 $white: #ffffff;
 $black: #000000;
+$picton-blue: #37b9e0;;
 
 
 //main colors
 $bg: $white;
 $border: lightgrey;
-$brand: $black;
+$brand: $picton-blue;
+
+//z-indexes
+$ziheader: 8000;

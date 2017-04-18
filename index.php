@@ -23,6 +23,8 @@
 </head>
 
 <body>
+  <art-header-dir></art-header-dir>
+
   <ui-view>
   </ui-view>
 </body>

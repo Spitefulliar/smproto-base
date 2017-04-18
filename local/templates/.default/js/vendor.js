@@ -15,7 +15,7 @@ import 'slick-carousel';
 
 /* vendor-styles */
 import 'normalize.css/normalize.css';
+import 'angular/angular-csp.css';
+import 'angular-material/angular-material.css';
 import 'slick-carousel/slick/slick.css';
 // import 'slick-carousel/slick/slick-theme.css';
-// import 'angular/angular-csp.css';
-// import 'angular-material/angular-material.css';
