@@ -276,8 +276,7 @@ var config = {
                         },
                         "useBuiltIns": true,
                         "debug": false
-                      }],
-                      ['flow']
+                      }]
                     ]
                   }
                 }

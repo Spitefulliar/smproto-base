@@ -75,8 +75,5 @@
     "url-loader": "^0.5.7",
     "webpack": "^2.3.3"
   },
-  "devDependencies": {
-    "babel-preset-flow": "^6.23.0",
-    "flow-bin": "^0.44.0"
-  }
+  "devDependencies": {}
 }

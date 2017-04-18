@@ -1,18 +1,18 @@
-// @flow
 export class Config {
-  constructor(options: object = {
-      TYPE: string,
-      NAME : string,
-      PAGE_NAME : string,
-      PAGE_STATE : string,
-      PAGE_URL : string,
-      PAGE_TITLE : string,
-      PAGE_API_PARAM : string,
-      PAGE_LOADER_PARAM: string,
-      MODULE_NAME : string,
-      CONTROLLER_NAME : string,
-      DIRECTIVE_NAME : string,
-      SERVICE_NAME : string,
+  constructor(options = {
+      TYPE: false,
+      NAME : false,
+      PAGE_NAME : false,
+      PAGE_STATE : false,
+      PAGE_URL : false,
+      PAGE_TITLE : false,
+      PAGE_LOADER : false,
+      PAGE_API_PARAM : false,
+      PAGE_LOADER_PARAM: false,
+      MODULE_NAME : false,
+      CONTROLLER_NAME : false,
+      DIRECTIVE_NAME : false,
+      SERVICE_NAME : false,
     }, ...args) {
 
     let vm = this;
