@@ -1,11 +1,12 @@
 export class Config {
   constructor(options = {
-      TYPE: 'component',
-      NAME : '',
+      TYPE: false,
+      NAME : false,
       PAGE_NAME : false,
       PAGE_STATE : false,
       PAGE_URL : false,
       PAGE_TITLE : false,
+      PAGE_LOADER : false,
       PAGE_API_PARAM : false,
       PAGE_LOADER_PARAM: false,
       MODULE_NAME : false,

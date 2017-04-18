@@ -270,12 +270,12 @@ var config = {
                   options: {
                     // 'presets': [['es2015', { "modules": false }]]
                     "presets": [
-                        ["env", {
-                          "targets": {
-                            "browsers": ["last 2 versions", "ie >= 10"]
-                          },
-                          "useBuiltIns": true,
-                          "debug": false
+                      ["env", {
+                        "targets": {
+                          "browsers": ["last 2 versions", "ie >= 10"]
+                        },
+                        "useBuiltIns": true,
+                        "debug": false
                       }]
                     ]
                   }

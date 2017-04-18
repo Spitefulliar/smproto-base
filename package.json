@@ -74,5 +74,6 @@
     "svg-sprite-loader": "^0.3.0",
     "url-loader": "^0.5.7",
     "webpack": "^2.3.3"
-  }
+  },
+  "devDependencies": {}
 }

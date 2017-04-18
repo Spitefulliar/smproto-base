@@ -1,9 +1,9 @@
-var MODULE_CONFIG = ['$stateProvider', '$urlRouterProvider', '$locationProvider', 
+var MODULE_CONFIG = ['$stateProvider', '$urlRouterProvider', '$locationProvider',
 function($stateProvider, $urlRouterProvider, $locationProvider) {
 
     //mode declaration
-    $locationProvider.html5Mode(false);//.hashPrefix('!'); 
-    // $locationProvider.html5Mode(true);//.hashPrefix('!'); 
+    $locationProvider.html5Mode(false);//.hashPrefix('!');
+    // $locationProvider.html5Mode(true);//.hashPrefix('!');
 
     // let config = require('../../helper_config.js');
     // let viewsDir = "/dist/views/pages/";
