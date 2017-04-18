@@ -1,8 +1,0 @@
-[ignore]
-.*/node_modules/*
-.*[^/local/templates/.default/js/]
-[include]
-
-[libs]
-
-[options]
