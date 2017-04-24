@@ -15,17 +15,17 @@
   <!-- eof CSS -->
 
   <!-- js -->
-  <script rel="preload" src="./local/templates/.default/assets/vendor.js?<?php echo time()?>" type="text/javascript" charset="utf-8"></script>
-  <script rel="preload" src="./local/templates/.default/assets/bundle.js?<?php echo time()?>" type="text/javascript" charset="utf-8"></script>
+  <script defer rel="preload" src="./local/templates/.default/assets/vendor.js?<?php echo time()?>" type="text/javascript" charset="utf-8"></script>
+  <script defer rel="preload" src="./local/templates/.default/assets/bundle.js?<?php echo time()?>" type="text/javascript" charset="utf-8"></script>
   <!-- different locale for en -->
-  <script rel="preload" src="./local/templates/.default/libs/angular-i18n/angular-locale_ru.js"></script>
+  <script defer rel="preload" src="./local/templates/.default/libs/angular-i18n/angular-locale_ru.js"></script>
   <!-- eof js -->
 </head>
 
 <body>
   <art-header-dir></art-header-dir>
 
-  <ui-view>
+  <ui-view autoscroll="true">
   </ui-view>
 </body>
 </html>

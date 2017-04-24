@@ -1,0 +1,350 @@
+{
+    "catalogStructure": [{
+        "name": "МУЖЧИНАМ",
+        "param": "sex",
+        "value": "gender_muzhskoi",
+        "categories": [{
+                "name": "Вид спорта",
+                "param": "nevisp",
+                "value": false,
+                "items": [{
+                        "name": "Водный туризм",
+                        "param": "nevisp",
+                        "value": "vodniy_turizm",
+                        "items": [
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Горный туризм",
+                        "param": "nevisp",
+                        "value": "gorniy_turizm",
+                        "items": [
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Зимний туризм",
+                        "param": "nevisp",
+                        "value": "zimniy_turizm",
+                        "items": [
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Походы",
+                        "param": "nevisp",
+                        "value": "pohody",
+                        "items": [
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Обувь",
+                "param": "togr",
+                "value": "ware_group_obuv",
+                "items": [{
+                        "name": "Водный туризм",
+                        "param": "nevisp",
+                        "value": "vodniy_turizm",
+                        "items": [
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Горный туризм",
+                        "param": "nevisp",
+                        "value": "gorniy_turizm",
+                        "items": [
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Зимний туризм",
+                        "param": "nevisp",
+                        "value": "zimniy_turizm",
+                        "items": [
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Походы",
+                        "param": "nevisp",
+                        "value": "pohody",
+                        "items": [
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Одежда",
+                "param": "togr",
+                "value": "ware_group_odezhda",
+                "items": [{
+                        "name": "Водный туризм",
+                        "param": "nevisp",
+                        "value": "vodniy_turizm",
+                        "items": [
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Горный туризм",
+                        "param": "nevisp",
+                        "value": "gorniy_turizm",
+                        "items": [
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Зимний туризм",
+                        "param": "nevisp",
+                        "value": "zimniy_turizm",
+                        "items": [
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "Походы",
+                        "param": "nevisp",
+                        "value": "pohody",
+                        "items": [
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            },
+                            {
+                                "name": "Кроссовки",
+                                "param": "togr",
+                                "value": "ware_group_krossovki"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }]
+}

@@ -47,7 +47,6 @@ $elbr: 0px * $mult !default;
 $conpad: 33.5px * $mult !default;
 $content-mw: 512px * $mult !default;
 
-
 //layout breakpoints
 $lbrp-lg:     1280px !default;
 $lbrp-md:     1024px !default;
@@ -58,13 +57,13 @@ $lbrp-xxs:     374px !default;
 //colors
 $white: #ffffff;
 $black: #000000;
-$picton-blue: #37b9e0;;
-
+$picton-blue: #37b9e0;
+$gothic: #6a96a2;
 
 //main colors
 $bg: $white;
 $border: lightgrey;
-$brand: $picton-blue;
+$brand: $gothic;
 
 //z-indexes
 $ziheader: 8000;

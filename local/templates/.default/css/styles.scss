@@ -333,5 +333,9 @@ body {
   }
 }
 
+.md-open-menu-container {
+    z-index: $ziheader + 10;
+}
+
 
 /* eof main styles */

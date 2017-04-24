@@ -15,9 +15,19 @@ var MODULE_CONFIG = ['$mdThemingProvider', function($mdThemingProvider) {
     $mdThemingProvider
       .theme('default')
         .dark()
-        .primaryPalette('blue')
-        .accentPalette('light-blue')
+        .primaryPalette('teal')
+        .accentPalette('blue')
         .backgroundPalette('blue-grey');
+    $mdThemingProvider
+        .enableBrowserColor({
+          theme: 'default', // Default is 'default'
+          palette: 'accent', // Default is 'primary', any basic material palette and extended palettes are available
+          hue: '800' // Default is '800'
+        });
+
+        // .primaryPalette('blue')
+        // .accentPalette('light-blue')
+        // .backgroundPalette('teal');
   }];
 
 export default MODULE_CONFIG;

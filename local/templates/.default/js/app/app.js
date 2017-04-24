@@ -5,10 +5,10 @@ import routeProvider from './providers/routeProvider.js';
 
 //angular modules
 import angular from 'angular';
-import ngAria from 'angular-aria';
-import touch from 'angular-touch';
+// import ngAria from 'angular-aria';
+// import touch from 'angular-touch';
 import uirouter from 'angular-ui-router';
-import animate from 'angular-animate';
+// import animate from 'angular-animate';
 import svgBaseFix from 'angular-svg-base-fix';
 import baronScrollbar from 'angular-baron-scrollbar';
 import angularSlick from 'angular-slick-carousel';
@@ -72,10 +72,10 @@ services.keys().forEach(function(item, i, arr) {
 //all dependent modules
 appDependenciesArr = appDependenciesArr.concat([
     'ngMaterial',
-    'ngAria',
+    // 'ngAria',
     // 'ngTouch', //not included with material
     'ui.router',
-    'ngAnimate',
+    // 'ngAnimate',
     'svgBaseFix',
     'angular-baron-scrollbar',
     'slickCarousel',

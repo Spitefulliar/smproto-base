@@ -1,12 +1,33 @@
 <header class="header">
-    <md-nav-bar md-selected-nav-item="currentNavItem">
-        <md-nav-item md-nav-click="goto('page1')" name="page1">
-            Page One
-        </md-nav-item>
-        <md-nav-item md-nav-href="#page2" name="page3" class="md-primary">Page Two</md-nav-item>
-        <md-nav-item md-nav-sref="page3" name="page2" class="md-primary">Page Three</md-nav-item>
-        <md-nav-item md-nav-sref="app.page4" sref-opts="{reload: true, notify: true}" name="page4" class="md-primary">
-            Page Four
-        </md-nav-item>
-    </md-nav-bar>
+    <md-toolbar class="md-menu-toolbar">
+        <div layout="row" layout-align="start center" layout-fill >
+            <md-toolbar-filler>
+                <span class="logo">Logo</span>
+            </md-toolbar-filler>
+            <div>
+                <md-menu-bar>
+                    <md-menu ng-repeat="dept in headerMenu.catalog.items">
+                            <!--ng-mouseenter="$mdMenu.open($event)"-->
+                        <md-button
+                            ui-sref="{{ (dept.sref)? dept.sref : 'index' }}( {{dept.srefParams}})"
+                            ui-sref-opts="{reload: true}"
+                            ng-mouseenter="openMenu($mdMenu, $event)"
+                            class="md-accent">
+                            <span ng-bind-html="dept.name | html" aria-label="{{dept.name}}"></span>
+                        </md-button>
+                        <md-menu-content ng-mouseleave="closeMenu($mdMenu, $event)">
+                            <md-menu-item ng-repeat="category in dept.categories">
+                                <md-button
+                                    ui-sref="{{(category.sref)? category.sref : 'index' }}({{category.srefParams}})"
+                                    ui-sref-opts="{reload: true}"
+                                    class="md-accent">
+                                    <span ng-bind-html="category.name | html" aria-label="{{category.name}}"></span>
+                                </md-button>
+                            </md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
+                </md-menu-bar>
+            </div>
+        </div>
+    </md-toolbar>
 </header>

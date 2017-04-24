@@ -12,6 +12,6 @@ export const APP  = {
   API_POSTFIX: '.json',
   DICTIONARIESPATH: "/local/templates/.default/js/app/dictionaries/dictionary_",
   API: {
-    STRUCTURE: 'structure.json'
+    MENU: 'menu.json'
   }
 };
