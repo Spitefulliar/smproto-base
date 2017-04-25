@@ -10,4 +10,10 @@
   z-index: $ziheader;
   height: 128px;
   background: $brand;
+  &__toolbar {
+      height: 100%;
+  }
+  &__menu-bar {
+      height: 100%;
+  }
 }
