@@ -1,7 +1,7 @@
 /* Service for fetching structure of site and catalog
  */
 export default class Service {
-  constructor($http, $rootScope) {
+  constructor($http, $rootScope, $state) {
     let vm = this;
 
     // fetch resources. apiurl: "" (url), qData: {} (params)
@@ -37,12 +37,68 @@ export default class Service {
         return await data;
 
       } catch (e) {
-        console.error(e.message);
+        console.warn(e.message, e);
         return;
       }
     }
 
     vm.fetchMenu();
+
+    //menu
+    vm.makeMenu = function(data) {
+      if (!data || !data.menu) return;
+      let menu = angular.copy(data.menu);
+
+      if (!menu.catalog) {
+        console.warn('No catalog info provided');
+        return;
+      }
+
+      let {sref = 'catalog', srefParams = {}, delimeter = '/', departments = []} = menu.catalog;
+
+      menu.catalog.departments =  departments.map(function(department) {
+        let parentSrefParams = srefParams;
+        let { srefParams = {}, categories = []} = department;
+
+        department.srefParams = Object.assign({}, parentSrefParams, srefParams, {delim1: delimeter});
+        department.sref = sref;
+        department.href = $state.href(sref, srefParams);
+
+        srefParams = Object.assign({}, department.srefParams);
+
+        department.categories = categories.map(function (category) {
+          let parentSrefParams = srefParams;
+          let { srefParams = {}, subcategories = []} = category;
+
+          category.srefParams = Object.assign({}, parentSrefParams, srefParams, {delim2: delimeter});
+          category.sref = sref;
+          category.href = $state.href(sref, srefParams);
+
+          srefParams = Object.assign({}, category.srefParams);
+
+          category.subcategories = subcategories.map(function (subcategory) {
+            let parentSrefParams = srefParams;
+            let { srefParams = {}, param, value, subcategories = []} = subcategory;
+
+            subcategory.srefParams = Object.assign({}, parentSrefParams, srefParams, {
+                subcategory: param,
+                subcategory_val: value
+              });
+            subcategory.sref = sref;
+            subcategory.href = $state.href(sref, srefParams);
+
+            return subcategory;
+          });
+
+          return category;
+        });
+
+        return department;
+      });
+
+      return menu;
+    }
+
   }
 
   //structure
@@ -56,15 +112,10 @@ export default class Service {
     return this._menuStructure;
   }
 
-  //menu
-  makeMenu(data) {
-    if (!data || !data.menu) return;
-    let menu = angular.copy(data.menu);
-    return menu;
-  }
+
 
   get menu() {
-    return this._headerMenu;
+    return this._menu;
   }
 
 
@@ -72,6 +123,8 @@ export default class Service {
   makeHeaderMenu(data) {
     if (!data || !data.headerMenu) return;
     let menu = angular.copy(data.headerMenu);
+    menu = Object.assign(menu, this.menu);
+    console.log(menu);
     return menu;
   }
 
@@ -92,4 +145,4 @@ export default class Service {
 
 }
 
-Service.$inject = ['$http', '$rootScope'];
+Service.$inject = ['$http', '$rootScope', '$state'];

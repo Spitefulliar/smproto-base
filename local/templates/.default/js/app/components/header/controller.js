@@ -7,7 +7,6 @@ export default class HeaderController {
     $scope.menuService = artServiceMenuService;
 
     $scope.headerMenu = $scope.menuService.headerMenu;
-
     $scope.openMenu = function($mdMenu, ev) {
       let menuTO = $timeout(function(){
         $mdMenu.open(ev);
@@ -30,6 +29,7 @@ export default class HeaderController {
 
     $rootScope.$on('$routeChangeSuccess', function(event, current) {
       $scope.currentNavItem = getCurrentLinkFromRoute(current);
+      console.log($state);
     });
   }
 }
