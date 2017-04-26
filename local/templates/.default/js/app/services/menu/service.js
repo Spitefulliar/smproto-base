@@ -55,32 +55,27 @@ export default class Service {
       }
 
       let {sref = 'catalog', srefParams = {}, delimeter = '/', departments = []} = menu.catalog;
+      let parentSrefParams = srefParams;
 
+      //making sref params, chldren extend parents srefParams
       menu.catalog.departments =  departments.map(function(department) {
-        let parentSrefParams = srefParams;
         let { srefParams = {}, categories = []} = department;
 
         department.srefParams = Object.assign({}, parentSrefParams, srefParams, {delim1: delimeter});
         department.sref = sref;
         department.href = $state.href(sref, srefParams);
 
-        srefParams = Object.assign({}, department.srefParams);
-
         department.categories = categories.map(function (category) {
-          let parentSrefParams = srefParams;
           let { srefParams = {}, subcategories = []} = category;
 
-          category.srefParams = Object.assign({}, parentSrefParams, srefParams, {delim2: delimeter});
+          category.srefParams = Object.assign({}, department.srefParams, srefParams, {delim2: delimeter});
           category.sref = sref;
           category.href = $state.href(sref, srefParams);
 
-          srefParams = Object.assign({}, category.srefParams);
-
           category.subcategories = subcategories.map(function (subcategory) {
-            let parentSrefParams = srefParams;
             let { srefParams = {}, param, value, subcategories = []} = subcategory;
 
-            subcategory.srefParams = Object.assign({}, parentSrefParams, srefParams, {
+            subcategory.srefParams = Object.assign({}, category.srefParams, srefParams, {
                 subcategory: param,
                 subcategory_val: value
               });
@@ -90,9 +85,10 @@ export default class Service {
             return subcategory;
           });
 
+          // console.log('category.srefParams',category.srefParams);
           return category;
         });
-
+        console.log('department.srefParams',department.srefParams);
         return department;
       });
 
