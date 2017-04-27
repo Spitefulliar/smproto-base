@@ -85,10 +85,8 @@ export default class Service {
             return subcategory;
           });
 
-          // console.log('category.srefParams',category.srefParams);
           return category;
         });
-        console.log('department.srefParams',department.srefParams);
         return department;
       });
 
@@ -120,7 +118,6 @@ export default class Service {
     if (!data || !data.headerMenu) return;
     let menu = angular.copy(data.headerMenu);
     menu = Object.assign(menu, this.menu);
-    console.log(menu);
     return menu;
   }
 
@@ -132,6 +129,7 @@ export default class Service {
   makeFooterMenu(data) {
     if (!data || !data.footerMenu) return;
     let menu = angular.copy(data.footerMenu);
+    menu = Object.assign(menu, this.menu);
     return menu;
   }
 

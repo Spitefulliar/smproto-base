@@ -7,6 +7,7 @@ export default class HeaderController {
     $scope.menuService = artServiceMenuService;
 
     $scope.headerMenu = $scope.menuService.headerMenu;
+
     $scope.openMenu = function($mdMenu, ev) {
       let menuTO = $timeout(function(){
         $mdMenu.open(ev);

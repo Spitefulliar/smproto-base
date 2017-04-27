@@ -1,13 +1,10 @@
 //utils
-// $images: "./../dist/img";
-// $fontspath: "./../dist/fonts";
 $images: "./../img";
 $fontspath: "./../fonts";
 $imgslg: "/desktop";
 $imgssm: "/tablet";
 $imgsxs: "/mobile";
 
-$mult: 2; //multiplier for previously written elements
 
 //font families
 $fflight: 'robotolight', 'Helvetica Neue', sans-serif !default;
@@ -36,16 +33,10 @@ $lhreg: 1.11;
 //dimentions
 $contentmh: 100vh;
 
-//dimentions
-$contentmh: 100vh;
-$tbheight: 32px * $mult;
-$tbpad: 4px * $mult;
-$navbarh: $tbheight - $tbpad * $mult;
+$elbr: 0px !default;
 
-$elbr: 0px * $mult !default;
-
-$conpad: 33.5px * $mult !default;
-$content-mw: 512px * $mult !default;
+$conpad: 15px !default;
+$content-mw: 1280px !default;
 
 //layout breakpoints
 $lbrp-lg:     1280px !default;
@@ -59,11 +50,12 @@ $white: #ffffff;
 $black: #000000;
 $picton-blue: #37b9e0;
 $gothic: #6a96a2;
+$geyser: #cfd8dc;
 
 //main colors
 $bg: $white;
 $border: lightgrey;
-$brand: $gothic;
+$brand: $geyser;
 
 //z-indexes
 $ziheader: 8000;
