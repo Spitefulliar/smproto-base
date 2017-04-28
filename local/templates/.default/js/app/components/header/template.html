@@ -1,0 +1,81 @@
+<header class="header">
+    <art-top-bar-dir class="header__top-bar"></art-top-bar-dir>
+    <div class="header__main">
+        <div class="container_padded">
+            <md-toolbar class="header__toolbar md-menu-toolbar">
+                <div layout="row" layout-align="start center" layout-fill >
+                    <md-toolbar-filler class="header__logo-wrap">
+                        <a ui-sref="index" class="logo">
+                            <svg>
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-logosm"></use>
+                            </svg>
+                        </a>
+                    </md-toolbar-filler>
+                    <div>
+                        <md-menu-bar class="header__menu-bar">
+                            <md-menu class="header-menu-item" id="header-menu-item_{{$index}}"
+                                ng-repeat="department in headerMenu.catalog.departments track by $index"
+                                md-offset="0 45"
+                                md-container-class="blah"
+                                >
+
+                                <md-button class="header-menu-item__btn md-primary md-raised"
+                                    ui-sref="{{ (department.sref)? department.sref : 'index' }}( {{department.srefParams}})"
+                                    ui-sref-opts="{reload: true}"
+                                    ui-sref-active-eq="md-hue-2"
+                                    href="{{department.href}}"
+                                    ng-mouseenter="openMenu($mdMenu, $event)"
+                                    >
+                                    <span ng-bind-html="department.name | html" aria-label="{{department.name}}" ></span>
+                                </md-button>
+
+                                <md-menu-content class="header-menu-item__content"
+                                    ng-mouseleave="closeMenu($mdMenu, $event)"
+                                    id="header__menu-container_{{$index}}"
+                                    >
+                                    <div layout="row" layout-align="start center" layout-fill>
+                                        <div class="header-menu-item__col" flex="25"
+                                            ng-repeat="category in department.categories track by $index">
+                                            <md-menu-item class="header-menu-item__li">
+                                                <a class="header-menu-item__li-link header-menu-item__li-link_title md-primary"
+                                                    ui-sref="{{(category.sref)? category.sref : 'index' }}({{category.srefParams}})"
+                                                    ui-sref-opts="{reload: true}"
+                                                    ui-sref-active-eq="md-hue-2"
+                                                    href="{{category.href}}"
+                                                    ng-bind-html="category.name | html"
+                                                    >
+                                                </a>
+                                            </md-menu-item>
+                                            <md-menu-item ng-repeat="subcategory in category.subcategories track by $index">
+                                                <a class="header-menu-item__li-link md-primary"
+                                                    md-ink-ripple="false"
+                                                    ui-sref="{{(subcategory.sref)? subcategory.sref : 'index' }}({{subcategory.srefParams}})"
+                                                    ui-sref-opts="{reload: true}"
+                                                    ui-sref-active-eq="md-hue-2"
+                                                    href="{{subcategory.href}}"
+                                                    ng-bind-html="subcategory.name | html"
+                                                    >
+                                                </a>
+                                            </md-menu-item>
+                                        </div>
+                                    </div>
+
+                                </md-menu-content>
+                            </md-menu>
+                        </md-menu-bar>
+                    </div>
+                    <div flex ></div>
+                    <div class="header__compare">
+                        В сравнении 4 товара
+                    </div>
+                    <md-button class="md-icon-button" aria-label="Favorite">
+                        <svg>
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-search"></use>
+                        </svg>
+                    </md-button>
+
+                </div>
+            </md-toolbar>
+        </div>
+    </div>
+</header>

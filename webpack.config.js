@@ -275,7 +275,8 @@ var config = {
                           "browsers": ["last 2 versions", "ie >= 10"]
                         },
                         "useBuiltIns": true,
-                        "debug": false
+                        "debug": false,
+                        "modules": false
                       }]
                     ]
                   }

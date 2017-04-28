@@ -1,0 +1,45 @@
+@import '../variables';
+@import '../mixins';
+@import '../functions';
+//component styles here
+.header {
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  z-index: $ziheader;
+  background: $brand;
+
+  &__top-bar {
+    display: block;
+    width: 100%;
+  }
+
+  &__main {
+      display: block;
+      width: 100%;
+  }
+
+  &__toolbar {
+      height: 100px;
+  }
+
+  &__menu-bar {
+      height: 100%;
+  }
+
+  &__logo {
+    margin-right: 30px;
+  }
+
+  &__logo-wrap {
+      width: auto;
+  }
+
+  &__compare {
+      width: 195px;
+      padding: 0 10px;
+      font-size: $fsmd;
+      color: $fun-green;
+  }
+}

@@ -75,9 +75,9 @@ angular-i18n@^1.5.5:
   version "1.5.9"
   resolved "https://registry.yarnpkg.com/angular-i18n/-/angular-i18n-1.5.9.tgz#b9282028150929b1edd2e312c7cf5d7aa1505ad6"
 
-angular-material@^1.0.9, angular-material@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/angular-material/-/angular-material-1.1.1.tgz#ed12f394ba71a9189d664115624f6787a7439af2"
+angular-material@^1.0.9, angular-material@latest:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/angular-material/-/angular-material-1.1.4.tgz#27de35646f54ccd320080af0c708e1b438af87f6"
 
 angular-messages@^1.5.8:
   version "1.5.9"
@@ -94,10 +94,6 @@ angular-slick-carousel@^3.1.7:
 angular-svg-base-fix@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/angular-svg-base-fix/-/angular-svg-base-fix-2.0.0.tgz#f3d5f85b87a10d21310f47da8455038b90cfb000"
-
-angular-touch@^1.5.2:
-  version "1.5.9"
-  resolved "https://registry.yarnpkg.com/angular-touch/-/angular-touch-1.5.9.tgz#d280981d9ab9c76f1c8f306bf3997fe92604bf8b"
 
 angular-translate-handler-log@^2.15.1:
   version "2.15.1"
