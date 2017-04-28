@@ -28,10 +28,9 @@ export default class HeaderController {
       $scope.headerMenu = $scope.menuService.headerMenu;
     });
 
-    $rootScope.$on('$routeChangeSuccess', function(event, current) {
-      $scope.currentNavItem = getCurrentLinkFromRoute(current);
-      console.log($state);
-    });
+    // $rootScope.$on('$routeChangeSuccess', function(event, current) {
+    //   $scope.currentNavItem = getCurrentLinkFromRoute(current);
+    // });
   }
 }
 

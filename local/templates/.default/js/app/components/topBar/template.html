@@ -2,7 +2,7 @@
     <div class="container_padded">
         <div class="top-bar__toolbar" layout="row" layout-align="space-between center">
             <div class="top-bar__item" ng-repeat="item in links track by $index">
-                <md-button  class="top-bar__link" ui-sref="{{item.sref}}" target="_blank" ><span ng-bind-html="item.name | html"></span></md-button>
+                <md-button  class="top-bar__link" aria-label="{{item.name}}" ui-sref="{{item.sref}}" target="_blank" ><span ng-bind-html="item.name | html"></span></md-button>
             </div>
             <div flex ></div>
             <div class="top-bar__item">
@@ -11,8 +11,14 @@
                 </md-button>
             </div>
             <div class="top-bar__item">
-                <md-select class="top-bar__language-select " ng-model="language" placeholder="{{languageSelect.label}}" class="md-no-underline">
-                    <md-option ng-repeat="option in languageSelect.options" ng-value="option.value">{{option.name}}</md-option>
+                <md-select class="top-bar__language-select"
+                    ng-model="language"
+                    md-no-asterisk
+                    aria-label="language select"
+                    ng-change="setLanguageCookie(language)"
+                    placeholder="{{languageSelect.label}}"
+                    class="md-no-underline">
+                    <md-option ng-repeat="option in languageSelect.options" ng-value="option.value"><span class="flag_{{option.value}}"></span>&nbsp;<span>{{option.name}}</span></md-option>
                 </md-select>
             </div>
         </div>

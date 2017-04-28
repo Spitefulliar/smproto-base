@@ -12,6 +12,7 @@
                             <md-menu class="header-menu-item" id="header-menu-item_{{$index}}"
                                 ng-repeat="department in headerMenu.catalog.departments track by $index"
                                 md-offset="0 45"
+                                md-container-class="blah"
                                 >
 
                                 <md-button class="header-menu-item__btn md-primary md-raised"
@@ -20,7 +21,6 @@
                                     ui-sref-active-eq="md-hue-2"
                                     href="{{department.href}}"
                                     ng-mouseenter="openMenu($mdMenu, $event)"
-                                    aria-owns="header__menu-container_{{$index}}"
                                     >
                                     <span ng-bind-html="department.name | html" aria-label="{{department.name}}" ></span>
                                 </md-button>

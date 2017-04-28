@@ -9,9 +9,9 @@
      ========================================================================== */
 
 body {
-  background: $white;
-  font-family: $ffreg;
-  font-size: $fstxt;
+    background: $white;
+    font-family: $ffreg;
+    font-size: $fstxt;
 }
 
 h1,
@@ -20,266 +20,266 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: normal;
+    font-weight: normal;
 }
 
 a {
-  &,
-  &:visited,
-  &:hover,
-  &:focus {
-    text-decoration: none;
-  }
+    &,
+    &:visited,
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
 }
 
 svg {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .svg-icon {
-  margin: 0;
-  background-repeat: no-repeat no-repeat;
-  display: inline-block;
-  vertical-align: middle;
-  height: 1em;
-  max-width: 1em;
-  line-height: 1em;
-  svg {
-    width: auto;
-    max-height: 100%;
-    max-width: 100%;
-    fill: currentColor;
-  }
+    margin: 0;
+    background-repeat: no-repeat no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    height: 1em;
+    max-width: 1em;
+    line-height: 1em;
+    svg {
+        width: auto;
+        max-height: 100%;
+        max-width: 100%;
+        fill: currentColor;
+    }
 }
 
 .logo {
-  cursor: pointer;
-  display: inline-block;
-  svg {
-    display: block;
-    width: 100%;
-    height: 100%;
-    fill: $white;
-  }
+    cursor: pointer;
+    display: inline-block;
+    svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: $white;
+    }
 }
 
 .social-icon {
-  @extend .svg-icon;
-  @include link-text();
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 12px;
-  color: $white;
-  cursor: pointer;
-  font-size: 32px;
-  width: 32px;
-  height: 32px;
-  -webkit-transition: color 400ms ease;
-  -moz-transition: color 400ms ease;
-  -ms-transition: color 400ms ease;
-  -o-transition: color 400ms ease;
-  transition: color 400ms ease;
-  &_fb:hover {
-    color: #3d5a98;
-  }
-  &_vk:hover {
-    color: #4c75a3;
-  }
-  &_ok:hover {
-    color: #ff9600;
-  }
-  &_tw:hover {
-    color: #2aa9e0;
-  }
-  &_gplus:hover {
-    color: #dc4a38;
-  }
-  &_linkedin:hover {
-    color: #0077b5;
-  }
+    @extend .svg-icon;
+    @include link-text();
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 12px;
+    color: $white;
+    cursor: pointer;
+    font-size: 32px;
+    width: 32px;
+    height: 32px;
+    -webkit-transition: color 400ms ease;
+    -moz-transition: color 400ms ease;
+    -ms-transition: color 400ms ease;
+    -o-transition: color 400ms ease;
+    transition: color 400ms ease;
+    &_fb:hover {
+        color: #3d5a98;
+    }
+    &_vk:hover {
+        color: #4c75a3;
+    }
+    &_ok:hover {
+        color: #ff9600;
+    }
+    &_tw:hover {
+        color: #2aa9e0;
+    }
+    &_gplus:hover {
+        color: #dc4a38;
+    }
+    &_linkedin:hover {
+        color: #0077b5;
+    }
 }
 
 // buttons
 .btn,
 md-button.btn {
-  overflow: visible;
-  position: relative;
-  margin: 0;
-  font-family: $ffbtn;
-  font-size: $fsbtn;
-  color: $white;
-  border: 1px solid transparent;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  &.disabled,
-  &:disabled {
-    opacity: 0.3;
-    cursor: default !important;
-  }
-  &.btn {}
-  .svg-icon {
-    vertical-align: text-top;
-  }
+    overflow: visible;
+    position: relative;
+    margin: 0;
+    font-family: $ffbtn;
+    font-size: $fsbtn;
+    color: $white;
+    border: 1px solid transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    &.disabled,
+    &:disabled {
+        opacity: 0.3;
+        cursor: default !important;
+    }
+    &.btn {}
+    .svg-icon {
+        vertical-align: text-top;
+    }
 }
 
 //scrollbar
 .scroller {
-  padding-right: 18px;
-  margin-right: -18px;
-  &__wrapper {
-    position: relative;
-    overflow: hidden;
-    height: 100%;
-    &__x {
-      width: 100%;
+    padding-right: 18px;
+    margin-right: -18px;
+    &__wrapper {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        &__x {
+            width: 100%;
+        }
     }
-  }
-  &__track_v {
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background: none;
-    opacity: 1;
-  }
-  &__bar_v {
-    right: -3px;
-    width: 6px;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
-    background: $white;
-    opacity: 0.4;
-    cursor: pointer;
-  }
-  &::-webkit-scrollbar,
-  &::-webkit-scrollbar-button,
-  &::-webkit-scrollbar-track,
-  &::-webkit-scrollbar-thumb,
-  &::-webkit-scrollbar-corner,
-  &::-webkit-resizer,
-  {
-    /* for Mac OS X support */
-    width: 0;
-    height: 0;
-    display: none;
-  }
+    &__track_v {
+        top: 0;
+        width: 2px;
+        height: 100%;
+        background: none;
+        opacity: 1;
+    }
+    &__bar_v {
+        right: -3px;
+        width: 6px;
+        -webkit-border-radius: 0px;
+        border-radius: 0px;
+        background: $white;
+        opacity: 0.4;
+        cursor: pointer;
+    }
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-button,
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-thumb,
+    &::-webkit-scrollbar-corner,
+    &::-webkit-resizer,
+    {
+        /* for Mac OS X support */
+        width: 0;
+        height: 0;
+        display: none;
+    }
 }
 
 .badge {
-  $h: 16px;
-  display: inline-block;
-  padding: 0 2px;
-  color: $white;
-  min-width: $h;
-  height: $h;
-  -webkit-border-radius: 2px;
-  border-radius: 2px;
-  font-family: $ffmd;
-  font-size: $fssm;
-  line-height: $h;
-  background: $brand;
-  text-align: center;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+    $h: 16px;
+    display: inline-block;
+    padding: 0 2px;
+    color: $white;
+    min-width: $h;
+    height: $h;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    font-family: $ffmd;
+    font-size: $fssm;
+    line-height: $h;
+    background: $brand;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 //forms
 .form {
-  $bra: 2px;
-  &_vertical {
-    .input-container_white {
-      border-top: 1px solid $border;
-      &:first-of-type {
-        border-top: none;
-        -webkit-border-top-left-radius: $bra;
-        border-top-left-radius: $bra;
-        -webkit-border-top-right-radius: $bra;
-        border-top-right-radius: $bra;
-      }
-      &:last-of-type {
-        -webkit-border-bottom-left-radius: $bra;
-        border-bottom-left-radius: $bra;
-        -webkit-border-bottom-right-radius: $bra;
-        border-bottom-right-radius: $bra;
-      }
-      input.md-input,
-      input[type="text"].md-input,
-      input[type="password"].md-input,
-      input[type="email"].md-input {
-        &:-webkit-autofill {
-          &:first-of-type {
-            -webkit-border-top-left-radius: $bra;
-            border-top-left-radius: $bra;
-            -webkit-border-top-right-radius: $bra;
-            border-top-right-radius: $bra;
-          }
-          &:last-of-type {
-            -webkit-border-bottom-left-radius: $bra;
-            border-bottom-left-radius: $bra;
-            -webkit-border-bottom-right-radius: $bra;
-            border-bottom-right-radius: $bra;
-          }
+    $bra: 2px;
+    &_vertical {
+        .input-container_white {
+            border-top: 1px solid $border;
+            &:first-of-type {
+                border-top: none;
+                -webkit-border-top-left-radius: $bra;
+                border-top-left-radius: $bra;
+                -webkit-border-top-right-radius: $bra;
+                border-top-right-radius: $bra;
+            }
+            &:last-of-type {
+                -webkit-border-bottom-left-radius: $bra;
+                border-bottom-left-radius: $bra;
+                -webkit-border-bottom-right-radius: $bra;
+                border-bottom-right-radius: $bra;
+            }
+            input.md-input,
+            input[type="text"].md-input,
+            input[type="password"].md-input,
+            input[type="email"].md-input {
+                &:-webkit-autofill {
+                    &:first-of-type {
+                        -webkit-border-top-left-radius: $bra;
+                        border-top-left-radius: $bra;
+                        -webkit-border-top-right-radius: $bra;
+                        border-top-right-radius: $bra;
+                    }
+                    &:last-of-type {
+                        -webkit-border-bottom-left-radius: $bra;
+                        border-bottom-left-radius: $bra;
+                        -webkit-border-bottom-right-radius: $bra;
+                        border-bottom-right-radius: $bra;
+                    }
+                }
+            }
         }
-      }
+        .md-custom.md-button {
+            display: block;
+            width: 100%;
+            height: 46px;
+            margin-top: 17px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
     }
-    .md-custom.md-button {
-      display: block;
-      width: 100%;
-      height: 46px;
-      margin-top: 17px;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-    }
-  }
 }
 
 .input-container_white {
-  $bra: 2px;
-  background: $white;
-  margin: 0;
-  padding: 0;
-  font-size: 15px;
-  label:not(.md-no-float):not(.md-container-ignore),
-  .md-placeholder {
-    font-family: $ffmd;
-    padding-left: 16px;
-    -webkit-transform: translate3d(0, 40px, 0) scale(1);
-    -moz-transform: translate3d(0, 40px, 0) scale(1);
-    -ms-transform: translate3d(0, 40px, 0) scale(1);
-    -o-transform: translate3d(0, 40px, 0) scale(1);
-    transform: translate3d(0, 40px, 0) scale(1);
-  }
-  &.md-input-focused label:not(.md-no-float),
-  &.md-input-has-placeholder label:not(.md-no-float),
-  &.md-input-has-value label:not(.md-no-float) {
-    -webkit-transform: translate3d(0, 22px, 0) scale(0.75);
-    -moz-transform: translate3d(0, 22px, 0) scale(0.75);
-    -ms-transform: translate3d(0, 22px, 0) scale(0.75);
-    -o-transform: translate3d(0, 22px, 0) scale(0.75);
-    transform: translate3d(0, 22px, 0) scale(0.75);
-  }
-  input.md-input,
-  input[type="text"].md-input,
-  input[type="password"].md-input,
-  input[type="email"].md-input {
-    display: block;
-    height: 47px;
-    width: 100%;
-    max-width: 100%;
-    padding: 23px 16px 8px;
-    border-bottom: none;
-    color: $black;
-    line-height: 16px;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  .md-errors-spacer {
-    display: none;
-  }
+    $bra: 2px;
+    background: $white;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    label:not(.md-no-float):not(.md-container-ignore),
+    .md-placeholder {
+        font-family: $ffmd;
+        padding-left: 16px;
+        -webkit-transform: translate3d(0, 40px, 0) scale(1);
+        -moz-transform: translate3d(0, 40px, 0) scale(1);
+        -ms-transform: translate3d(0, 40px, 0) scale(1);
+        -o-transform: translate3d(0, 40px, 0) scale(1);
+        transform: translate3d(0, 40px, 0) scale(1);
+    }
+    &.md-input-focused label:not(.md-no-float),
+    &.md-input-has-placeholder label:not(.md-no-float),
+    &.md-input-has-value label:not(.md-no-float) {
+        -webkit-transform: translate3d(0, 22px, 0) scale(0.75);
+        -moz-transform: translate3d(0, 22px, 0) scale(0.75);
+        -ms-transform: translate3d(0, 22px, 0) scale(0.75);
+        -o-transform: translate3d(0, 22px, 0) scale(0.75);
+        transform: translate3d(0, 22px, 0) scale(0.75);
+    }
+    input.md-input,
+    input[type="text"].md-input,
+    input[type="password"].md-input,
+    input[type="email"].md-input {
+        display: block;
+        height: 47px;
+        width: 100%;
+        max-width: 100%;
+        padding: 23px 16px 8px;
+        border-bottom: none;
+        color: $black;
+        line-height: 16px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    .md-errors-spacer {
+        display: none;
+    }
 }
 
 // eof forms
@@ -293,48 +293,48 @@ md-button.btn {
 
 *:focus,
 *:active {
-  outline: none;
+    outline: none;
 }
 
 html {
-  min-height: 100%;
+    min-height: 100%;
 }
 
 body {
-  min-height: 100%;
-  height: auto;
-  position: relative;
-  -ms-overflow-x: hidden;
-  overflow-x: hidden;
-  background: $bg;
-  color: $black;
+    min-height: 100%;
+    height: auto;
+    position: relative;
+    -ms-overflow-x: hidden;
+    overflow-x: hidden;
+    background: $bg;
+    color: $black;
 }
 
 .content {
-  overflow: visible;
-  min-height: $contentmh;
+    overflow: visible;
+    min-height: $contentmh;
 }
 
 .container {
-  max-width: $content-mw;
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  &_padded {
+    max-width: $content-mw;
     margin-left: auto;
     margin-right: auto;
-    max-width: $content-mw;
-    padding: 0 $conpad;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-  }
+    &_padded {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: $content-mw;
+        padding: 0 $conpad;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    }
 }
 
 .md-button {
-    & > span {
+    &>span {
         max-width: 100%;
         -ms-flex: 1 1 auto;
         flex: 1 1 auto;
@@ -351,6 +351,52 @@ body {
 .md-open-menu-container,
 .md-select-menu-container {
     z-index: $ziheader + 10;
+}
+
+//flags
+// Common properties
+$flag-width: 1em;
+$flag-height: $flag-width;
+// Three thirds flag
+@function thirds($first, $second, $last, $or: 90deg) {
+    @return linear-gradient(90deg, #ffffff 33.3%, #0000cd 33.3%, #0000cd 66.6%, #ff0000 66.6%);
+}
+
+%flag {
+    display: inline-block;
+    width: $flag-width;
+    height: $flag-height;
+    vertical-align: baseline;
+    transition: all .5s;
+    border-radius: 100%;
+}
+
+.flag {
+    &_ru {
+        @extend %flag;
+        background: thirds(white, mediumblue, red, -180deg);
+        background-image: -webkit-gradient(-180deg, #ffffff 33.3%, #0000cd 33.3%, #0000cd 66.6%, #ff0000 66.6%);
+        background-image: -webkit-linear-gradient(-180deg, #ffffff 33.3%, #0000cd 33.3%, #0000cd 66.6%, #ff0000 66.6%);
+        background-image: -moz-linear-gradient(-180deg, #ffffff 33.3%, #0000cd 33.3%, #0000cd 66.6%, #ff0000 66.6%);
+        background-image: -o-linear-gradient(-180deg, #ffffff 33.3%, #0000cd 33.3%, #0000cd 66.6%, #ff0000 66.6%);
+        background-image: linear-gradient(-180deg, #ffffff 33.3%, #0000cd 33.3%, #0000cd 66.6%, #ff0000 66.6%);
+        background-color: #00247d;
+        background-repeat: no-repeat;
+    }
+    &_en {
+        @extend %flag;
+        background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#cf142b), to(#cf142b)), -webkit-gradient(linear, 0 0, 0 100%, from(#cf142b), to(#cf142b)), -webkit-gradient(linear, 0 0, 100% 0, from(#ffffff), to(#ffffff)), -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ffffff)), -webkit-gradient(linear, 0 -10%, 70% 150%, color-stop(0.46, transparent), color-stop(0.46, #ffffff), color-stop(0.50, #ffffff), color-stop(0.50, #cf142b), color-stop(0.53, #cf142b), color-stop(0.53, #ffffff), color-stop(0.55, #ffffff), color-stop(0.55, transparent), color-stop(1, transparent)), -webkit-gradient(linear, 160% 70%, 100% 200%, color-stop(0.45, transparent), color-stop(0.45, #ffffff), color-stop(0.50, #ffffff), color-stop(0.50, #cf142b), color-stop(0.53, #cf142b), color-stop(0.53, #ffffff), color-stop(0.56, #ffffff), color-stop(0.56, transparent), color-stop(1, transparent));
+        background-image: -webkit-linear-gradient(90deg, #cf142b, #cf142b), -webkit-linear-gradient(0deg, #cf142b, #cf142b), -webkit-linear-gradient(90deg, #FFFFFF, #FFFFFF), -webkit-linear-gradient(0deg, #FFFFFF, #FFFFFF), -webkit-linear-gradient(55deg, transparent 45%, #ffffff 45%, #ffffff 48%, #cf142b 48%, #cf142b 51%, #ffffff 51%, #ffffff 56%, transparent 56%, transparent 100%), -webkit-linear-gradient(-55deg, transparent 45%, #ffffff 45%, #ffffff 50%, #cf142b 50%, #cf142b 53%, #ffffff 53%, #ffffff 56%, transparent 56%, transparent 100%);
+        background-image: -moz-linear-gradient(90deg, #cf142b, #cf142b), -moz-linear-gradient(0deg, #cf142b, #cf142b), -moz-linear-gradient(90deg, #FFFFFF, #FFFFFF), -moz-linear-gradient(0deg, #FFFFFF, #FFFFFF), -moz-linear-gradient(55deg, transparent 45%, #ffffff 45%, #ffffff 48%, #cf142b 48%, #cf142b 51%, #ffffff 51%, #ffffff 56%, transparent 56%, transparent 100%), -moz-linear-gradient(-55deg, transparent 45%, #ffffff 45%, #ffffff 50%, #cf142b 50%, #cf142b 53%, #ffffff 53%, #ffffff 56%, transparent 56%, transparent 100%);
+        background-image: -ms-linear-gradient(90deg, #cf142b, #cf142b), -ms-linear-gradient(0deg, #cf142b, #cf142b), -ms-linear-gradient(90deg, #FFFFFF, #FFFFFF), -ms-linear-gradient(0deg, #FFFFFF, #FFFFFF), -ms-linear-gradient(55deg, transparent 45%, #ffffff 45%, #ffffff 48%, #cf142b 48%, #cf142b 51%, #ffffff 51%, #ffffff 56%, transparent 56%, transparent 100%), -ms-linear-gradient(-55deg, transparent 45%, #ffffff 45%, #ffffff 50%, #cf142b 50%, #cf142b 53%, #ffffff 53%, #ffffff 56%, transparent 56%, transparent 100%);
+        background-image: -o-linear-gradient(90deg, #cf142b, #cf142b), -o-linear-gradient(0deg, #cf142b, #cf142b), -o-linear-gradient(90deg, #FFFFFF, #FFFFFF), -o-linear-gradient(0deg, #FFFFFF, #FFFFFF), -o-linear-gradient(55deg, transparent 45%, #ffffff 45%, #ffffff 48%, #cf142b 48%, #cf142b 51%, #ffffff 51%, #ffffff 56%, transparent 56%, transparent 100%), -o-linear-gradient(-55deg, transparent 45%, #ffffff 45%, #ffffff 50%, #cf142b 50%, #cf142b 53%, #ffffff 53%, #ffffff 56%, transparent 56%, transparent 100%);
+        background-image: linear-gradient(90deg, #cf142b, #cf142b), linear-gradient(0deg, #cf142b, #cf142b), linear-gradient(90deg, #FFFFFF, #FFFFFF), linear-gradient(0deg, #FFFFFF, #FFFFFF), linear-gradient(55deg, transparent 45%, #ffffff 45%, #ffffff 48%, #cf142b 48%, #cf142b 51%, #ffffff 51%, #ffffff 56%, transparent 56%, transparent 100%), linear-gradient(-55deg, transparent 45%, #ffffff 45%, #ffffff 50%, #cf142b 50%, #cf142b 53%, #ffffff 53%, #ffffff 56%, transparent 56%, transparent 100%);
+        background-position: 0 50%, 50% 0, 0 50%, 50% 0, 0 100%, 100% 0;
+        -moz-background-size: 100% 20%, 16% 100%, 100% 33%, 25% 100%, 100% 100%, 100% 100%;
+        background-size: 100% 20%, 16% 100%, 100% 33%, 25% 100%, 100% 100%, 100% 100%;
+        background-repeat: no-repeat;
+        background-color: #00247d;
+    }
 }
 
 
