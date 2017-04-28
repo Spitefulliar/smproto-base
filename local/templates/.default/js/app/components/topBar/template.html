@@ -18,7 +18,7 @@
                     ng-change="setLanguageCookie(language)"
                     placeholder="{{languageSelect.label}}"
                     class="md-no-underline">
-                    <md-option ng-repeat="option in languageSelect.options" ng-value="option.value"><span class="flag_{{option.value}}"></span>&nbsp;<span>{{option.name}}</span></md-option>
+                    <md-option ng-repeat="option in languageSelect.options" ng-value="option.value"><span class="flag_{{option.value}}"></span>&nbsp;<span>{{option.name | translate}}</span></md-option>
                 </md-select>
             </div>
         </div>

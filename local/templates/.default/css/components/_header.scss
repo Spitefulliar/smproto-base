@@ -31,4 +31,15 @@
   &__logo {
     margin-right: 30px;
   }
+
+  &__logo-wrap {
+      width: auto;
+  }
+
+  &__compare {
+      width: 195px;
+      padding: 0 10px;
+      font-size: $fsmd;
+      color: $fun-green;
+  }
 }

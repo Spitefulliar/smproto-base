@@ -4,8 +4,12 @@
         <div class="container_padded">
             <md-toolbar class="header__toolbar md-menu-toolbar">
                 <div layout="row" layout-align="start center" layout-fill >
-                    <md-toolbar-filler>
-                        <span class="logo">Logo</span>
+                    <md-toolbar-filler class="header__logo-wrap">
+                        <a ui-sref="index" class="logo">
+                            <svg>
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-logosm"></use>
+                            </svg>
+                        </a>
                     </md-toolbar-filler>
                     <div>
                         <md-menu-bar class="header__menu-bar">
@@ -60,6 +64,16 @@
                             </md-menu>
                         </md-menu-bar>
                     </div>
+                    <div flex ></div>
+                    <div class="header__compare">
+                        В сравнении 4 товара
+                    </div>
+                    <md-button class="md-icon-button" aria-label="Favorite">
+                        <svg>
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-search"></use>
+                        </svg>
+                    </md-button>
+
                 </div>
             </md-toolbar>
         </div>

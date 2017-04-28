@@ -56,10 +56,14 @@ svg {
 .logo {
     cursor: pointer;
     display: inline-block;
+    width: 170px;
+    height: 80px;
     svg {
         display: block;
         width: 100%;
         height: 100%;
+        max-width: 100%;
+        max-height: 100%;
         fill: $white;
     }
 }
@@ -354,13 +358,9 @@ body {
 }
 
 //flags
-// Common properties
+
 $flag-width: 1em;
 $flag-height: $flag-width;
-// Three thirds flag
-@function thirds($first, $second, $last, $or: 90deg) {
-    @return linear-gradient(90deg, #ffffff 33.3%, #0000cd 33.3%, #0000cd 66.6%, #ff0000 66.6%);
-}
 
 %flag {
     display: inline-block;
@@ -374,7 +374,6 @@ $flag-height: $flag-width;
 .flag {
     &_ru {
         @extend %flag;
-        background: thirds(white, mediumblue, red, -180deg);
         background-image: -webkit-gradient(-180deg, #ffffff 33.3%, #0000cd 33.3%, #0000cd 66.6%, #ff0000 66.6%);
         background-image: -webkit-linear-gradient(-180deg, #ffffff 33.3%, #0000cd 33.3%, #0000cd 66.6%, #ff0000 66.6%);
         background-image: -moz-linear-gradient(-180deg, #ffffff 33.3%, #0000cd 33.3%, #0000cd 66.6%, #ff0000 66.6%);
@@ -398,6 +397,9 @@ $flag-height: $flag-width;
         background-color: #00247d;
     }
 }
+
+//eof flags
+
 
 
 /* eof main styles */
