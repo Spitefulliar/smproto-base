@@ -38,6 +38,8 @@ $elbr: 0px !default;
 $conpad: 15px !default;
 $content-mw: 1280px !default;
 
+$headerh: 128px;
+
 //layout breakpoints
 $lbrp-lg:     1280px !default;
 $lbrp-md:     1024px !default;
@@ -51,11 +53,12 @@ $black: #000000;
 $picton-blue: #37b9e0;
 $gothic: #6a96a2;
 $geyser: #cfd8dc;
+$silver-chalice: #adadad;
 $fun-green: #009933;
 
 //main colors
 $bg: $white;
-$border: lightgrey;
+$border: $silver-chalice;
 $brand: $geyser;
 
 //z-indexes

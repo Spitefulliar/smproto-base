@@ -1,6 +1,6 @@
 <header class="header">
     <art-top-bar-dir class="header__top-bar"></art-top-bar-dir>
-    <div class="header__main">
+    <div class="header__main" data-header-pinned ng-class="{'header__main--pinned':'headerIsPinned'}">
         <div class="container_padded">
             <md-toolbar class="header__toolbar md-menu-toolbar">
                 <div layout="row" layout-align="start center" layout-fill >
@@ -68,12 +68,8 @@
                     <div class="header__compare">
                         В сравнении 4 товара
                     </div>
-                    <md-button class="md-icon-button" aria-label="Favorite">
-                        <svg>
-                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-search"></use>
-                        </svg>
-                    </md-button>
-
+                    <art-search-form-dir class="header__search" forceOpen="headerIsPinned" ng-class="{'header__search--pinned':'headerIsPinned'}">
+                    </art-search-form-dir>
                 </div>
             </md-toolbar>
         </div>

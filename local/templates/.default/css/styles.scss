@@ -314,6 +314,16 @@ body {
     color: $black;
 }
 
+ui-view {
+    margin-top: -$headerh + 1px;
+    padding-top: $headerh;
+}
+
+.main {
+    display: block;
+    padding-top: 1px;
+}
+
 .content {
     overflow: visible;
     min-height: $contentmh;
@@ -400,6 +410,9 @@ $flag-height: $flag-width;
 
 //eof flags
 
+.md-virtual-repeat-container.md-autocomplete-suggestions-container {
+    z-index: $ziheader + 5;
+}
 
 
 /* eof main styles */
