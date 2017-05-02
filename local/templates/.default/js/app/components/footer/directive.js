@@ -63,10 +63,10 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state',
   return {
     restrict: "AE",
     link: linkFunction,
+    controller: MODULE_CONFIG.CONTROLLER_NAME,
     scope: {
       forceOpen: '='
     },
-    controller: MODULE_CONFIG.CONTROLLER_NAME,
     template: require('./template.html')
   };
 }];
