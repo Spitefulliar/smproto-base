@@ -15,15 +15,19 @@
   <!-- eof CSS -->
 
   <!-- js -->
-  <script rel="preload" src="./local/templates/.default/assets/vendor.js?<?php echo time()?>" type="text/javascript" charset="utf-8"></script>
-  <script rel="preload" src="./local/templates/.default/assets/bundle.js?<?php echo time()?>" type="text/javascript" charset="utf-8"></script>
+  <script defer rel="preload" src="./local/templates/.default/assets/vendor.js?<?php echo time()?>" type="text/javascript" charset="utf-8"></script>
+  <script defer rel="preload" src="./local/templates/.default/assets/bundle.js?<?php echo time()?>" type="text/javascript" charset="utf-8"></script>
   <!-- different locale for en -->
-  <script rel="preload" src="./local/templates/.default/libs/angular-i18n/angular-locale_ru.js"></script>
+  <script defer rel="preload" src="./local/templates/.default/libs/angular-i18n/angular-locale_<? if (empty($_COOKIE["NG_TRANSLATE_LANG_KEY"])) { echo 'ru'; } else { echo $_COOKIE["NG_TRANSLATE_LANG_KEY"];} ?>.js"></script>
   <!-- eof js -->
 </head>
 
 <body>
-  <ui-view>
-  </ui-view>
+  <art-header-dir></art-header-dir>
+  <main class="main">
+    <ui-view autoscroll="true">
+    </ui-view>
+  </main>
+  <art-footer-dir></art-footer-dir>
 </body>
 </html>

@@ -41,41 +41,67 @@ export class Config {
       NAME: NAME
     };
 
-    if (TYPE == 'page') {
-      PAGE_NAME = PAGE_NAME || NAME;
-      PAGE_TITLE = PAGE_TITLE || PAGE_NAME;
-      PAGE_STATE = PAGE_STATE || NAME.toLowerCase();
-      PAGE_LOADER_PARAM = (PAGE_LOADER)? PAGE_LOADER_PARAM : false;
-      PAGE_URL = vm.buildPageUrl(PAGE_URL,PAGE_STATE,PAGE_LOADER_PARAM);
+    switch (TYPE) {
+      case 'page':
+        MODULE_NAME = CONFIG.APP.PREFIX + CONFIG.APP.PAGE_PREFIX +  NAME;
+        PAGE_NAME = PAGE_NAME || NAME;
+        PAGE_TITLE = PAGE_TITLE || PAGE_NAME;
+        PAGE_STATE = PAGE_STATE || NAME.toLowerCase();
+        PAGE_LOADER_PARAM = (PAGE_LOADER)? PAGE_LOADER_PARAM : false;
+        PAGE_URL = vm.buildPageUrl(PAGE_URL,PAGE_STATE,PAGE_LOADER_PARAM);
 
-      Object.assign(newConfig, {
-        // module config
-        MODULE_NAME: CONFIG.APP.PREFIX + NAME + CONFIG.APP.PAGE_POSTFIX,
-        CONTROLLER_NAME: CONFIG.APP.PREFIX + NAME + CONFIG.APP.PAGE_POSTFIX + CONFIG.APP.CONTROLLER_POSTFIX,
-        DIRECTIVE_NAME: CONFIG.APP.PREFIX + NAME + CONFIG.APP.PAGE_POSTFIX + CONFIG.APP.DIRECTIVE_POSTFIX,
-        SERVICE_NAME: CONFIG.APP.PREFIX + NAME + CONFIG.APP.PAGE_POSTFIX + CONFIG.APP.SERVICE_POSTFIX,
-        //page config
-        PAGE_NAME: PAGE_NAME,
-        PAGE_TITLE: PAGE_TITLE,
-        PAGE_STATE: PAGE_STATE,
-        PAGE_URL: PAGE_URL,
-        PAGE_TITLE: PAGE_TITLE,
-        PAGE_API_PARAM: PAGE_API_PARAM || PAGE_STATE,
-        PAGE_LOADER: PAGE_LOADER,
-        PAGE_LOADER_PARAM: PAGE_LOADER_PARAM,
-      });
+        Object.assign(newConfig, {
+          // module config
+          MODULE_NAME: MODULE_NAME,
+          CONTROLLER_NAME: MODULE_NAME + CONFIG.APP.CONTROLLER_POSTFIX,
+          DIRECTIVE_NAME: MODULE_NAME + CONFIG.APP.DIRECTIVE_POSTFIX,
+          SERVICE_NAME: MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX,
+          //page config
+          PAGE_NAME: PAGE_NAME,
+          PAGE_TITLE: PAGE_TITLE,
+          PAGE_STATE: PAGE_STATE,
+          PAGE_URL: PAGE_URL,
+          PAGE_TITLE: PAGE_TITLE,
+          PAGE_API_PARAM: PAGE_API_PARAM || PAGE_STATE,
+          PAGE_LOADER: PAGE_LOADER,
+          PAGE_LOADER_PARAM: PAGE_LOADER_PARAM,
+        });
+        break;
 
-    } else {
+      case 'service':
+        MODULE_NAME = CONFIG.APP.PREFIX + CONFIG.APP.SERVICE_PREFIX + NAME;
 
-      Object.assign(newConfig, {
-        // module config
-        MODULE_NAME: CONFIG.APP.PREFIX + NAME,
-        CONTROLLER_NAME: CONFIG.APP.PREFIX + NAME + CONFIG.APP.CONTROLLER_POSTFIX,
-        DIRECTIVE_NAME: CONFIG.APP.PREFIX + NAME + CONFIG.APP.DIRECTIVE_POSTFIX,
-        SERVICE_NAME: CONFIG.APP.PREFIX + NAME + CONFIG.APP.SERVICE_POSTFIX,
-      });
+        Object.assign(newConfig, {
+          // module config
+          MODULE_NAME: MODULE_NAME,
+          SERVICE_NAME: MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX
+        });
+        break;
 
+      case 'component':
+        MODULE_NAME = CONFIG.APP.PREFIX + NAME;
+
+        Object.assign(newConfig, {
+          // module config
+          MODULE_NAME: MODULE_NAME,
+          CONTROLLER_NAME: MODULE_NAME + CONFIG.APP.CONTROLLER_POSTFIX,
+          DIRECTIVE_NAME: MODULE_NAME + CONFIG.APP.DIRECTIVE_POSTFIX,
+          SERVICE_NAME: MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX,
+        });
+        break;
+
+      default:
+        MODULE_NAME = CONFIG.APP.PREFIX + NAME;
+        Object.assign(newConfig, {
+          // module config
+          MODULE_NAME: MODULE_NAME,
+          CONTROLLER_NAME: MODULE_NAME + CONFIG.APP.CONTROLLER_POSTFIX,
+          DIRECTIVE_NAME: MODULE_NAME + CONFIG.APP.DIRECTIVE_POSTFIX,
+          SERVICE_NAME: MODULE_NAME + CONFIG.APP.SERVICE_POSTFIX,
+        });
+        break;
     }
+
 
     if (args && args.length) {
       Object.assign(newConfig, ...args);

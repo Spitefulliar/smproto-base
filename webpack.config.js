@@ -275,7 +275,8 @@ var config = {
                           "browsers": ["last 2 versions", "ie >= 10"]
                         },
                         "useBuiltIns": true,
-                        "debug": false
+                        "debug": false,
+                        "modules": false
                       }]
                     ]
                   }
@@ -311,14 +312,14 @@ var config = {
         "node_modules"
       ],
       alias: {
-        // "TweenLite": path.join(__dirname,'/node_modules/gsap/src/uncompressed/TweenLite.js'),
-        // "TweenMax": path.join(__dirname,'/node_modules/gsap/src/uncompressed/TweenMax.js'),
-        // "TimelineLite": path.join(__dirname,'/node_modules/gsap/src/uncompressed/TimelineLite.js'),
-        // "TimelineMax": path.join(__dirname,'/node_modules/gsap/src/uncompressed/TimelineMax.js'),
-        // "ScrollMagic": path.join(__dirname,'/node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
-        // "animation.gsap": path.join(__dirname,'/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
-        // "animation.velocity": path.join(__dirname,'/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.velocity.js'),
-        // "velocity": path.join(__dirname,'/node_modules/velocity-animate/velocity.min.js'),
+        "TweenLite": path.join(__dirname,'/node_modules/gsap/src/uncompressed/TweenLite.js'),
+        "TweenMax": path.join(__dirname,'/node_modules/gsap/src/uncompressed/TweenMax.js'),
+        "TimelineLite": path.join(__dirname,'/node_modules/gsap/src/uncompressed/TimelineLite.js'),
+        "TimelineMax": path.join(__dirname,'/node_modules/gsap/src/uncompressed/TimelineMax.js'),
+        "ScrollMagic": path.join(__dirname,'/node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
+        "animation.gsap": path.join(__dirname,'/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
+        "animation.velocity": path.join(__dirname,'/node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.velocity.js'),
+        "velocity": path.join(__dirname,'/node_modules/velocity-animate/velocity.min.js'),
       }
     },
     plugins: [
@@ -336,9 +337,9 @@ var config = {
           'jQuery': 'jquery',
           'window.jQuery': 'jquery',
           'Slick': 'slick-carousel',
-          // 'TweenMax': 'TweenMax',
-          // 'TimeLineMax': 'TimeLineMax',
-          // 'ScrollMagic': 'scrollmagic',
+          'TweenMax': 'TweenMax',
+          'TimeLineMax': 'TimeLineMax',
+          'ScrollMagic': 'scrollmagic',
           // 'Hamster': 'hamsterjs',
           // 'Snap': 'snapsvg',
           // 'Matter': 'matter-js',

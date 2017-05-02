@@ -1,0 +1,120 @@
+<footer class="footer">
+    <div class="container_padded">
+        <div class="footer__subs">
+            <div layout="row" layout-align="space-between center ">
+                <div flex="50">
+                    <div class="footer__subs-text" >За подписку на новости "Бренда" дарим скидку 5%</div>
+                </div>
+                <div flex="50">
+                    <div class="footer__subs-box"></div>
+                </div>
+            </div>
+        </div>
+        <md-divider></md-divider>
+        <div class="footer__main">
+            <div layout="row" layout-align="space-between start">
+                <div flex="15">
+                    <a ui-sref="index" class="logo">
+                        <svg>
+                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-logosm"></use>
+                        </svg>
+                    </a>
+                    <div class="footer__logo-desc"  ng-bind-html="footerMenu.brand.desc | html"></div>
+                    <div class="footer__social">
+                        <p class="footer__social-text">{{footerMenu.social.text}}</p>
+                        <a class="footer__social-icon svg-icon" ng-href="{{item.link}}" title="{{item.name}}" target="_blank" ng-repeat="item in footerMenu.social.items track by $index">
+                            <svg>
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" ng-href="{{'#spr-' + item.icon}}"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div flex>
+                    <div class="footer__menu footer__menu_catalog">
+                        <div layout="row" layout-align="space-around start" layout-wrap>
+                            <div class="footer__menu-col" flex
+                                 ng-repeat="department in footerMenu.catalog.departments track by $index">
+                                <md-list class="footer__menu-list">
+                                    <md-list-item class="md-1-line">
+                                        <a class="footer__menu-link footer__menu-link_l"
+                                            ui-sref="{{ (department.sref)? department.sref : 'index' }}( {{department.srefParams}})"
+                                            ui-sref-opts="{reload: true}"
+                                            {#ui-sref-active-eq="md-hue-2"#}
+                                            href="{{department.href}}"
+                                            ng-bind-html="department.name | html"
+                                            ></a>
+                                    </md-list-item>
+                                    <md-list-item class="md-1-line" ng-repeat="category in department.categories track by $index">
+                                        <a class="footer__menu-link"
+                                            md-ink-ripple="false"
+                                            ui-sref="{{(category.sref)? category.sref : 'index' }}({{category.srefParams}})"
+                                            ui-sref-opts="{reload: true}"
+                                            {#ui-sref-active-eq="md-hue-2"#}
+                                            href="{{category.href}}"
+                                            ng-bind-html="category.name | html"
+                                            ></a>
+                                    </md-list-item>
+                                </md-list>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div flex="15">
+                    <div class="footer__menu footer__menu_site">
+                        <div layout="column" layout-align="space-around start">
+                            <div class="footer__menu-col" flex
+                                 ng-repeat="item in footerMenu.site.items track by $index">
+                                <md-list class="footer__menu-list">
+                                    <md-list-item class="md-1-line">
+                                        <a class="footer__menu-link footer__menu-link_l"
+                                        ui-sref="{{ (item.sref)? item.sref : 'index' }}( {{item.srefParams}})"
+                                        ui-sref-opts="{reload: true}"
+                                        {#ui-sref-active-eq="md-hue-2"#}
+                                        href="{{item.href}}"
+                                        ng-bind-html="item.name | html"
+                                        ></a>
+                                    </md-list-item>
+                                    <md-list-item class="md-1-line" ng-repeat="item in item.items track by $index">
+                                        <a class="footer__menu-link"
+                                            md-ink-ripple="false"
+                                            ui-sref="{{(item.sref)? item.sref : 'index' }}({{item.srefParams}})"
+                                            ui-sref-opts="{reload: true}"
+                                            {#ui-sref-active-eq="md-hue-2"#}
+                                            href="{{item.href}}"
+                                            ng-bind-html="item.name | html"
+                                            ></a>
+                                    </md-list-item>
+                                </md-list>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div flex="15">
+                    <div class="footer__shops">
+                        <div class="footer__shops-text">{{footerMenu.shops.text}}</div>
+                        <a href="index" class="footer__shops-item logo logo_sm" ng-href="{{item.link}}" title="{{item.name}}" target="_blank"
+                            ng-repeat="item in footerMenu.shops.items track by $index">
+                            <svg>
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="" ng-href="{{'#spr-' + item.icon}}"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer__contacts">
+                        <div class="footer__contacts-text" ng-bind-html="(('Contacts' | translate) + ':' | html)"></div>
+                        <div class="footer__contacts-item" ng-repeat="item in footerMenu.contacts track by $index">
+                            <span ng-bind-html="item.name | html"></span>:
+                            <a ng-if="item.type == 'email'" ng-href="{{'mailto:' + item.link}}"  target="_blank" ng-bind-html="item.text | html"></a>
+                            <a ng-if="item.type == 'tel'" ng-href="{{'tel:' + item.link}}"  target="_blank" ng-bind-html="item.text | html"></a>
+                            <a ng-if="item.type !== 'tel' && item.type !== 'email'" ng-href="{{'tel:' + item.link}}"  target="_blank" ng-bind-html="item.text | html"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <md-divider></md-divider>
+        <div class="footer__legal" ng-bind-html="footerMenu.legal | html"></div>
+        <div class="footer__copy" ng-bind-html="footerMenu.copy | html"></div>
+    </div>
+</footer>

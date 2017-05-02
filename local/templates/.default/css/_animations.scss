@@ -2,18 +2,24 @@
    animations
    ========================================================================== */
 
-.animated {
+%animated {
   -webkit-animation-duration: 0.8s;
   animation-duration: 0.8s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
+.animated {
+    @extend %animated;
+}
 
-.animated-long {
+%animated-long {
   -webkit-animation-duration: 1.5s;
   animation-duration: 1.5s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+}
+.animated-long {
+    @extend %animated-long;
 }
 
 @-webkit-keyframes slideInRight {
@@ -75,9 +81,13 @@
   }
 }
 
-.fadeInDown {
+%fadeInDown {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
+}
+
+.fadeInDown {
+    @extend %fadeInDown;
 }
 
 @-webkit-keyframes fadeInUp {

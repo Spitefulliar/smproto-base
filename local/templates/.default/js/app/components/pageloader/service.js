@@ -27,14 +27,13 @@ export default ['$http', '$rootScope',
 
       let urlPostfix = (CONFIG.APP.API_POSTFIX && (pageData.PAGE_API_PARAM.indexOf(CONFIG.APP.API_POSTFIX) == -1))? CONFIG.APP.API_POSTFIX : '';
       try {
-        service.fetchPage(CONFIG.APP.API_DIR + pageData.PAGE_API_PARAM + urlPostfix, $stateParams ).then(function(response){
-          if (!response || !response.page) throw new Error('No page provided in page data');
-          $scope.page = response.page;
-          $scope.pageData.title = $scope.page.title || $scope.pageData.title;
-          $rootScope.$broadcast('pageDataLoaded');
-        });
+        let response = await service.fetchPage(CONFIG.APP.API_DIR + pageData.PAGE_API_PARAM + urlPostfix, $stateParams );
+        if (!response || !response.page) throw new Error('No page provided in page data');
+        $scope.page = response.page;
+        $scope.pageData.title = $scope.page.title || $scope.pageData.title;
+        $rootScope.$broadcast('pageDataLoaded');
       } catch (e) {
-        console.warn(e.message);
+        console.error(e.message);
         return;
       }
     }
