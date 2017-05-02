@@ -24,14 +24,36 @@ export default class HeaderController {
       },0);
     };
 
+
+    function toggleHederPinState (event) {
+      $scope.headerIsPinned = (event.type == 'enter');
+      $scope.searchBarIsOpen = $scope.headerIsPinned;
+      return;
+    }
+    //header pin animation
+    function initHeaderPinAnimation() {
+
+      let smCtrl = new ScrollMagic.Controller();
+      let headerPinSMScene = new ScrollMagic.Scene({triggerElement: "main", triggerHook: 0, duration: 0})
+              // .setTween(tlHeaderPin)
+              .setClassToggle('[data-header-pinned]', "pinned")
+              .addTo(smCtrl);
+      // add listeners
+      headerPinSMScene.on("enter leave", toggleHederPinState);
+
+    };
+
     $rootScope.$on('$menuLoaded', function(event) {
       $scope.headerMenu = $scope.menuService.headerMenu;
+      //applying header pin animation
+      initHeaderPinAnimation();
     });
 
-    // $rootScope.$on('$routeChangeSuccess', function(event, current) {
-    //   $scope.currentNavItem = getCurrentLinkFromRoute(current);
-    // });
+  // $rootScope.$on('$routeChangeSuccess', function(event, current) {
+  //   $scope.currentNavItem = getCurrentLinkFromRoute(current);
+  // });
   }
+
 }
 
 HeaderController.$inject = ['$scope', '$rootScope', MODULE_CONFIG.SERVICE_NAME, '$log', '$timeout', '$window', '$state', '$http', '$mdMenu', 'artServiceMenuService'];

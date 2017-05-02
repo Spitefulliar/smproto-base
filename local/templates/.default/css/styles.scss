@@ -66,6 +66,10 @@ svg {
         max-height: 100%;
         fill: $white;
     }
+    &_sm {
+        width: 116px;
+        height: 20px;
+    }
 }
 
 .social-icon {
@@ -314,6 +318,19 @@ body {
     color: $black;
 }
 
+ui-view {
+    display: block;
+    margin-top: -$headerh + 1px;
+    padding-top: $headerh;
+}
+
+.main {
+    display: block;
+    padding-top: 1px;
+    min-height: 600px;
+    min-height: 60vh;
+}
+
 .content {
     overflow: visible;
     min-height: $contentmh;
@@ -400,6 +417,9 @@ $flag-height: $flag-width;
 
 //eof flags
 
+.md-virtual-repeat-container.md-autocomplete-suggestions-container {
+    z-index: $ziheader + 5;
+}
 
 
 /* eof main styles */

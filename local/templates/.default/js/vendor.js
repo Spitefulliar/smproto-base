@@ -4,11 +4,11 @@ import 'jquery';
 import 'slick-carousel';
 // import 'jquery-scrollify';
 // import 'hamsterjs';
-// import 'gsap';
-// import  'TweenMax';
-// import  'TimelineMax';
-// import  'scrollmagic';
-// import  'animation.gsap';
+import 'gsap';
+import  'TweenMax';
+import  'TimelineMax';
+import  'scrollmagic';
+import  'animation.gsap';
 // import  'animation.velocity';
 // import 'snapsvg/dist/snap.svg.js';
 
