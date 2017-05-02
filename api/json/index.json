@@ -4,6 +4,40 @@
     "id": 1,
     "code": "index",
     "title": "Index page",
-    "defaultProp": "Index <br>page"
+    "defaultProp": "Index <br>page",
+    "mainPromoSlider": {
+        "slides": [
+            {
+                "img": "//cdn.sptmr.ru/upload/dip/2017/banner/19_04_del/d-2000.jpg",
+                "alt": "sportmaster promo",
+                "link": "#"
+            },
+            {
+                "img": "//cdn.sptmr.ru/upload/dip/2017/banner/19_04_del/d-2000.jpg",
+                "alt": "sportmaster promo",
+                "link": "#"
+            },
+            {
+                "img": "//cdn.sptmr.ru/upload/dip/2017/banner/19_04_del/d-2000.jpg",
+                "alt": "sportmaster promo",
+                "link": "#"
+            },
+            {
+                "img": "//cdn.sptmr.ru/upload/dip/2017/banner/19_04_del/d-2000.jpg",
+                "alt": "sportmaster promo",
+                "link": "#"
+            },
+            {
+                "img": "//cdn.sptmr.ru/upload/dip/2017/banner/19_04_del/d-2000.jpg",
+                "alt": "sportmaster promo",
+                "link": "#"
+            },
+            {
+                "img": "//cdn.sptmr.ru/upload/dip/2017/banner/19_04_del/d-2000.jpg",
+                "alt": "sportmaster promo",
+                "link": "#"
+            }
+        ]
+    }
   }
 }
