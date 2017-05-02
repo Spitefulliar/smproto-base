@@ -20,6 +20,7 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state',
       $scope.searchFormIsOpen = () => $scope.forceOpen || $scope.manuallyOpen;
 
 
+
       // fetching initial results
       function fetchResults() {
         var allResults = 'good, product, шапка, брюки, футболка, носки, снаряжение';

@@ -28,5 +28,6 @@
     <ui-view autoscroll="true">
     </ui-view>
   </main>
+  <art-footer-dir></art-footer-dir>
 </body>
 </html>

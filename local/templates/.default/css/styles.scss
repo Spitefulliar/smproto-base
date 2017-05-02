@@ -66,6 +66,10 @@ svg {
         max-height: 100%;
         fill: $white;
     }
+    &_sm {
+        width: 116px;
+        height: 20px;
+    }
 }
 
 .social-icon {
@@ -315,6 +319,7 @@ body {
 }
 
 ui-view {
+    display: block;
     margin-top: -$headerh + 1px;
     padding-top: $headerh;
 }
@@ -322,6 +327,8 @@ ui-view {
 .main {
     display: block;
     padding-top: 1px;
+    min-height: 600px;
+    min-height: 60vh;
 }
 
 .content {

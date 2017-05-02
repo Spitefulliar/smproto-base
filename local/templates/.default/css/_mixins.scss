@@ -25,5 +25,7 @@
       -ms-text-overflow: ellipsis;
           text-overflow: ellipsis;
 }
-
+@mixin box($color: $border) {
+    border: 1px solid $color;
+}
 /* eof mixins */
