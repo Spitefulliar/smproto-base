@@ -24,10 +24,13 @@
 
 <body>
   <art-header-dir></art-header-dir>
+
   <main class="main">
     <ui-view autoscroll="true">
     </ui-view>
   </main>
+
+  <art-scroll-top-btn-dir></art-scroll-top-btn-dir>
   <art-footer-dir></art-footer-dir>
 </body>
 </html>

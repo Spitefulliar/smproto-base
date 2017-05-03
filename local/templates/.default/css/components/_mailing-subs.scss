@@ -1,0 +1,11 @@
+@import '../variables';
+@import '../mixins';
+@import '../functions';
+
+//component styles here
+.mailing-subs {
+    width: 423px;
+    max-width: 100%;
+    padding: 30px 50px;
+    background-color: #fff;
+}
