@@ -15,7 +15,7 @@
                         <md-menu-bar class="header__menu-bar">
                             <md-menu class="header-menu-item"
                                 ng-repeat="department in headerMenu.catalog.departments track by $index"
-                                md-offset="0 45"
+                                md-offset="0 {{(headerIsPinned)? 21 : 32}}"
                                 >
 
                                 <md-button class="header-menu-item__btn md-primary md-raised"

@@ -1,12 +1,10 @@
-<div class="main-promo-slider">
-    <slick class="main-promo-slider__slider" settings="slickConfigSlider" data-color="{{block.commonStyle['background-color']}}" >
-        <a class="main-promo-slider__slider-item"
-            ng-repeat="item in slides track by $index"
-            ng-style="{
-            'background-image': 'url(' + item.img + ')'
-            }"
-            alt="{{item.alt}}"
-            ng-href="{{item.link}}"
-            ></a>
-    </slick>
-</div>
+<slick class="main-promo-slider" settings="slickConfigSlider" data-color="{{block.commonStyle['background-color']}}" >
+    <a class="main-promo-slider__slide"
+        ng-repeat="item in slides track by $index"
+        ng-style="{
+        'background-image': 'url(' + item.img + ')'
+        }"
+        alt="{{item.alt}}"
+        ng-href="{{item.link}}"
+        ></a>
+</slick>
