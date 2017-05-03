@@ -87,7 +87,7 @@
                 "name": "ОДЕЖДА С ТЕХНОЛОГИЕЙ OMNI-HEAT",
                 "content": false,
                 "btnText": false,
-                "linkText": "Прочитайте больше",
+                "linkText": false,
                 "link": "#",
                 "img": "https://image.freepik.com/free-photo/nature-design-with-bokeh-effect_1048-1882.jpg"
             },
@@ -107,7 +107,12 @@
                 "link": "#",
                 "img": "https://image.freepik.com/free-photo/nature-design-with-bokeh-effect_1048-1882.jpg"
             }
-        ]
+        ],
+        "weeklyPromo": {
+            "name": "ПРЕДЛОЖЕНИЕ НЕДЕЛИ. УСПЕЙ КУПИТЬ",
+            "img": "https://image.freepik.com/free-photo/nature-design-with-bokeh-effect_1048-1882.jpg",
+            "sref": "catalog
+        }
     }
   }
 }

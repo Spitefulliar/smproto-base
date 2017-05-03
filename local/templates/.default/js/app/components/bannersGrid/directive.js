@@ -5,8 +5,6 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state',
   function ($rootScope, $http, $timeout, $window, $state) {
     var linkFunction = function linkFunction($scope, $element, $attributes) {
 
-      console.log($scope);
-
       /**
        * function for assigning cell sizes to array of banners
        *
@@ -29,13 +27,11 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state',
             "colspan": sizes[i][1]
           });
         });
-        console.log(banners);
+
         return banners;
       }
 
-      // $rootScope.$on('$pageDataLoaded', function(event) {
-        $scope.banners = makeGridPattern($scope.banners, $scope.baseCellHeight);
-      // });
+      $scope.banners = makeGridPattern($scope.banners, $scope.baseCellHeight);
     };
 
   return {
