@@ -2,14 +2,15 @@
     <!-- main promo slider -->
     <art-main-promo-slider-dir ng-if="page.mainPromoSlider && page.mainPromoSlider.slides.length" slides="page.mainPromoSlider.slides"></art-main-promo-slider-dir>
 
-    <!-- main banners -->
-    <art-banners-grid-dir ng-if="page.banners && page.banners.main.length" banners="page.banners.main" block-type="tall" base-cell-height="2" ></art-banners-grid-dir>
-
-    <!-- weekly promo -->
     <div class="container_padded">
+        <!-- main banners -->
+        <art-banners-grid-dir ng-if="page.banners && page.banners.main.length" banners="page.banners.main" base-cell-height="2" ></art-banners-grid-dir>
+        <!-- weekly promo -->
         <art-weekly-promo-dir ng-if="page.banners && page.banners.weeklyPromo" banner="page.banners.weeklyPromo" ></art-weekly-promo-dir>
+        <!-- secondary banners -->
+        <art-banners-grid-dir ng-if="page.banners && page.banners.secondary.length" banners="page.banners.secondary" base-cell-height="1" ></art-banners-grid-dir>
+        <!-- news announce list -->
+        <art-news-announce-list-dir ng-if="page.news && page.news.items.length" news="page.news"></art-news-announce-list-dir>
     </div>
 
-    <!-- secondary banners -->
-    <art-banners-grid-dir ng-if="page.banners && page.banners.secondary.length" banners="page.banners.secondary" block-type="regular" base-cell-height="1" ></art-banners-grid-dir>
 </div>

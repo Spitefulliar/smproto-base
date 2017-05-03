@@ -21,7 +21,6 @@ export default ['$rootScope','$http', '$timeout', '$window', '$state',
         }
 
         banners.map(function(item, i) {
-          console.log(sizes[i]);
           return Object.assign(item, {
             "rowspan": sizes[i][0] * baseCellHeight,
             "colspan": sizes[i][1]
