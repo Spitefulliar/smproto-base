@@ -2,5 +2,10 @@
     <!--<h1 ng-bind-html="page.defaultProp | html"></h1>
     <p><a href="#/default/">{{'found'|translate}} page link</a></p>
     <h2 ng-bind-html="'100'|currency|html"></h2>-->
-    <art-main-promo-slider-dir slides="page.mainPromoSlider.slides"></art-main-promo-slider-dir>
+    <!-- main promo slider -->
+    <art-main-promo-slider-dir ng-if="page.mainPromoSlider && page.mainPromoSlider.slides.length" slides="page.mainPromoSlider.slides"></art-main-promo-slider-dir>
+    <!-- main banners -->
+    <art-banners-grid-dir ng-if="page.banners && page.banners.main.length" banners="page.banners.main" block-type="tall" base-cell-height="2" ></art-banners-grid-dir>
+    <!-- secondary banners -->
+    <art-banners-grid-dir ng-if="page.banners && page.banners.secondary.length" banners="page.banners.secondary" block-type="regular" base-cell-height="1" ></art-banners-grid-dir>
 </div>

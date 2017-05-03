@@ -1,0 +1,31 @@
+<div class="banners-grid" ng-cloak>
+    <div class="container_padded">
+        <md-grid-list
+                md-cols-xs="1" md-cols-sm="1" md-cols-md="4" md-cols-gt-md="4"
+                md-row-height="2:1" md-row-height-sm="6:1"
+                md-gutter="30px" md-gutter-gt-sm="30px" >
+
+            <md-grid-tile class="banners-grid__tile banner"
+                ng-repeat="item in banners track by $index"
+                md-rowspan="{{item.rowspan}}" md-colspan="{{item.colspan}}"
+                md-rowspan-sm="{{item.rowspan}}" md-colspan-sm="1"
+                ng-style="{
+                'background-image': 'url(' + item.img + ')'
+                }"
+                >
+                <a class="banner__inner" ng-href="{{item.link}}">
+                    <figcaption class="banner__contaner" layout="column" layout-align="center center">
+                        <h3 class="banner__heading" ng-if="item.name" ng-bind-html="item.name | html"></h3>
+                        <div class="banner__content" ng-if="item.content"  ng-bind-html="item.content | html"></div>
+                        <div class="banner__link" ng-if="item.linkText" ng-bind-html="item.linkText | html"></div>
+                    </figcaption>
+                    <md-grid-tile-footer class="banner__footer" ng-if="item.btnText">
+                        <md-button ng-if="item.btnText" class="md-primary md-raised" aria-label="{{item.btnText}}">
+                            <span ng-bind-html="item.btnText | html"></span>
+                        </md-button>
+                    </md-grid-tile-footer>
+                </a>
+            </md-grid-tile>
+        </md-grid-list>
+    </div>
+</div>
