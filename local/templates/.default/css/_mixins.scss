@@ -1,6 +1,7 @@
 /* ==========================================================================
    mixins
    ========================================================================== */
+
 @mixin link-text() {
   text-decoration: none;
   color: inherit;
@@ -8,24 +9,40 @@
     color: inherit;
   }
 }
+
+@mixin link-underlined() {
+  text-decoration: underline;
+  color: inherit;
+  &, &:visited, &:focus {
+    color: inherit;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 @mixin panel() {
   border-radius: 2px;
   color: $dark;
   background-color: $white;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
 }
+
 @mixin list-plain() {
   margin: 0;
   padding-left: 0;
   list-style-type: none;
 }
+
 @mixin text-ellipsis() {
   white-space: nowrap;
       overflow: hidden;
       -ms-text-overflow: ellipsis;
           text-overflow: ellipsis;
 }
+
 @mixin box($color: $border) {
     border: 1px solid $color;
 }
+
 /* eof mixins */

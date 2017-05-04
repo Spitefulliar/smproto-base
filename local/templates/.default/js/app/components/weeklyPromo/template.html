@@ -1,0 +1,8 @@
+<div class="weekly-promo" ng-cloak
+    ng-style="{
+                'background-image': 'url(' + banner.img + ')'
+                }">
+    <a ui-sref="{{banner.sref}}" class="weekly-promo__container" layout="column" layout-align="center center">
+        <h3 class="weekly-promo__heading" ng-if="banner.name" ng-bind-html="banner.name | html"></h3>
+    </a>
+</div>

@@ -10,7 +10,6 @@ export default class footerController {
 
     $rootScope.$on('$menuLoaded', function(event) {
       $scope.footerMenu = $scope.menuService.footerMenu;
-      console.debug($scope.footerMenu);
     });
   }
 

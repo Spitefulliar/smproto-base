@@ -320,7 +320,7 @@ body {
 
 ui-view {
     display: block;
-    margin-top: -$headerh + 1px;
+    margin-top: -$headerh - 1px;
     padding-top: $headerh;
 }
 
