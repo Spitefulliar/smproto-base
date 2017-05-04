@@ -18,6 +18,7 @@ Webpack.config is tuned for develop mode - faster builds withought source maps o
 +   `npm run watch`: buid with watcher on
 
 ## Entries ##
+Root directory for entries context is `local/templates/.default/`
 
 ### Vendor ###
 Contains all vendor libs, accept those, needed for angular app
@@ -25,26 +26,34 @@ Contains all vendor libs, accept those, needed for angular app
 ### Bundle ###
 Contains:
 - styles, located at dist/css/;
-- scripts, included in index.js (aka app, sprite generator). Located at dist/js/;
+- scripts, included in index.js (aka app, sprite generator). Located at [root directory]/;
 
 ## App ##
-By default app is included into bundle and is located at dist/js/app.
-App uses config from /dist/js/helper_config:
+By default app is included into bundle and is located at [root directory]/app.
+App uses config from [root directory]/helper_config:
 - It's prefix
 - Modules postfix
 - Directives postfix
 - Controllers postfix
 - Service postfix
-App includes all components, located in dist/js/app/components folder. Every module is required by name of the folder in combination with app prefix and module postfix.
+
+
+App includes all components, located in `[root directory]/app/components` folder.
+App includes all pages, located in `[root directory]/app/pages` folder.
+App includes all services, located in `[root directory]/app/services` folder.
+Every module is required by name of the folder in combination with app prefix and module postfix.
 Every name (module,service, etc) looks looks like this:
     [app-prefix][name][corresponding postfix]
-Small default rouing provided in [root directory]/js/app/providers/routeProvider.js
-Angular material is excluded from app by default, but it is included in package.json
+Small default rouing provided in `[root directory]/js/app/providers/routeProvider.js`, but mostly routs are in pages folders.
+Every modules settings are located in config file in it's folder
+Angular material is also included.
 
+## Dictionaries ##
+Dictionaries are located in `[root directory]/app/dictionaries`. Asynchronously loaded according to selected locale.
 ## SVG Sprite ##
 SVG files are included in index.js
-Source folder is [root directory]/img/sprite
-For correct using you'll have to use combined shapes and remove all fills or strockes from source files. And replace them by css filling. If source colouring suits you well, you can leave it.
+Source folder is `[root directory]/img/sprite`
+For correct using you'll have to use combined shapes and remove all fills or strokes from source files. And replace them by css filling. If source colouring suits you well, you can leave it.
 
 
 
