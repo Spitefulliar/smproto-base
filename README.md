@@ -41,7 +41,9 @@ App uses config from `[root directory]/config`:
 
 
 App includes all components, located in `[root directory]/js/app/components` folder.
+Default component from this folder shows basic usage.
 App includes all pages, located in `[root directory]/js/app/pages` folder.
+Default page from this folder shows basic usage.
 App includes all services, located in `[root directory]/js/app/services` folder.
 Every module is required by name of the folder in combination with app prefix and module postfix.
 
