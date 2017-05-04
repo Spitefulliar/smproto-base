@@ -1,0 +1,10 @@
+<slick class="main-promo-slider" settings="slickConfigSlider">
+    <a class="main-promo-slider__slide"
+        ng-repeat="item in slides track by $index"
+        ng-style="{
+        'background-image': 'url(' + item.img + ')'
+        }"
+        alt="{{item.alt}}"
+        ng-href="{{item.link}}"
+        ></a>
+</slick>

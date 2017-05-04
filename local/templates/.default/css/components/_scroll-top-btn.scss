@@ -1,0 +1,28 @@
+@import '../variables';
+@import '../mixins';
+@import '../functions';
+
+//component styles here
+.scroll-top-btn {
+    display: block;
+    position: fixed;
+    height: auto;
+    padding: 10px;
+    width: 70px;
+    bottom: 5vh;
+    right: 5vw;
+    font-size: 22px;
+    line-height: 1;
+    background-color: $brand;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken($brand, 15%);
+    }
+
+    &__icon {
+        color: $white;
+    }
+}

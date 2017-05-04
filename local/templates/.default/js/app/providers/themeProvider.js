@@ -4,17 +4,17 @@ var MODULE_CONFIG = ['$mdThemingProvider', function($mdThemingProvider) {
       '50': 'ffffff',
       // 'A100': '9f62c9',
       // 'A200': '663399',
-      // 'A700': '824ab0',
+      'A700': '#000000',
       'contrastDefaultColor': 'light',
       'contrastDarkColors': ['50'],
-      'contrastLightColors': ['100', '200'],
+      'contrastLightColors': ['A700'],
     });
 
     $mdThemingProvider.definePalette('customLightBlue', customLightBlueMap);
 
     $mdThemingProvider
       .theme('default')
-        .dark()
+        // .light()
         .primaryPalette('customLightBlue')
         .accentPalette('blue')
         .backgroundPalette('blue-grey');

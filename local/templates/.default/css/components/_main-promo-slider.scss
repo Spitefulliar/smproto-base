@@ -1,0 +1,15 @@
+@import '../variables';
+@import '../mixins';
+@import '../functions';
+//component styles here
+.main-promo-slider {
+    width: 100%;
+    &__slide {
+        display: inline-block;
+        height: 460px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: $geyser;
+    }
+}

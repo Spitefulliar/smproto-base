@@ -1,0 +1,11 @@
+@import '../variables';
+@import '../mixins';
+@import '../functions';
+
+//component styles here
+.banners-grid {
+    margin-bottom: 30px;
+    &__tile {
+        background-color: $porcelain;
+    }
+}

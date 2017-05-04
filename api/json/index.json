@@ -4,6 +4,142 @@
     "id": 1,
     "code": "index",
     "title": "Index page",
-    "defaultProp": "Index <br>page"
+    "defaultProp": "Index <br>page",
+    "mainPromoSlider": {
+        "slides": [
+            {
+                "img": "//cdn.sptmr.ru/upload/dip/2017/banner/19_04_del/d-2000.jpg",
+                "alt": "sportmaster promo",
+                "link": "#"
+            },
+            {
+                "img": "//cdn.sptmr.ru/upload/dip/2017/banner/19_04_del/d-2000.jpg",
+                "alt": "sportmaster promo",
+                "link": "#"
+            },
+            {
+                "img": "//cdn.sptmr.ru/upload/dip/2017/banner/19_04_del/d-2000.jpg",
+                "alt": "sportmaster promo",
+                "link": "#"
+            },
+            {
+                "img": "//cdn.sptmr.ru/upload/dip/2017/banner/19_04_del/d-2000.jpg",
+                "alt": "sportmaster promo",
+                "link": "#"
+            },
+            {
+                "img": "//cdn.sptmr.ru/upload/dip/2017/banner/19_04_del/d-2000.jpg",
+                "alt": "sportmaster promo",
+                "link": "#"
+            },
+            {
+                "img": "//cdn.sptmr.ru/upload/dip/2017/banner/19_04_del/d-2000.jpg",
+                "alt": "sportmaster promo",
+                "link": "#"
+            }
+        ]
+    },
+    "banners": {
+        "main": [
+            {
+                "name": "БЕРИ ОТ ПРИРОДЫ МАКСИМУМ!",
+                "content": false,
+                "linkText": false,
+                "btnText": "УЗНАТЬ БОЛЬШЕ",
+                "link": "#",
+                "img": "https://image.freepik.com/free-photo/nature-design-with-bokeh-effect_1048-1882.jpg"
+            },
+            {
+                "name": "МУЖСКАЯ КОЛЛЕКЦИЯ",
+                "content": false,
+                "btnText": false,
+                "linkText": false,
+                "link": "#",
+                "img": "https://image.freepik.com/free-photo/nature-design-with-bokeh-effect_1048-1882.jpg"
+            },
+            {
+                "name": "СПОРТ ТАМ, ГДЕ ТЫ",
+                "content": false,
+                "linkText": false,
+                "btnText": "ПЕРЕЙТИ В КОЛЛЕЦИЮ",
+                "link": "#",
+                "img": "https://image.freepik.com/free-photo/nature-design-with-bokeh-effect_1048-1882.jpg"
+            },
+            {
+                "name": "ЖЕНСКАЯ КОЛЛЕКЦИЯ",
+                "content": false,
+                "linkText": false,
+                "btnText": false,
+                "link": "#",
+                "img": "https://image.freepik.com/free-photo/nature-design-with-bokeh-effect_1048-1882.jpg"
+            }
+        ],
+        "secondary": [
+            {
+                "name": "&quot;БРЕНД&quot; ЯВЛЯЕТСЯ ВЫСОКОТЕХНОЛОГИЧНЫМ",
+                "content": "Мы применяем инновационные решения, которые помогают спортсменам, компаниям и миру.",
+                "linkText": "Прочитайте больше.",
+                "btnText": false,
+                "link": "#",
+                "img": "https://image.freepik.com/free-photo/nature-design-with-bokeh-effect_1048-1882.jpg"
+            },
+            {
+                "name": "ОДЕЖДА С ТЕХНОЛОГИЕЙ OMNI-HEAT",
+                "content": false,
+                "btnText": false,
+                "linkText": false,
+                "link": "#",
+                "img": "https://image.freepik.com/free-photo/nature-design-with-bokeh-effect_1048-1882.jpg"
+            },
+            {
+                "name": "ПОДАРОЧНАЯ КАРТА <br>ПРЕКРАСНЫЙ ПОДАРОК <br>НА 23 ФЕВРАЛЯ",
+                "content": false,
+                "linkText": false,
+                "btnText": "ПРЕОБРЕСТИ",
+                "link": "#",
+                "img": "https://image.freepik.com/free-photo/nature-design-with-bokeh-effect_1048-1882.jpg"
+            },
+            {
+                "name": "ОДЕЖДА С ТЕХНОЛОГИЕЙ OMNI-HEAT",
+                "content": false,
+                "linkText": false,
+                "btnText": false,
+                "link": "#",
+                "img": "https://image.freepik.com/free-photo/nature-design-with-bokeh-effect_1048-1882.jpg"
+            }
+        ],
+        "weeklyPromo": {
+            "name": "ПРЕДЛОЖЕНИЕ НЕДЕЛИ. УСПЕЙ КУПИТЬ",
+            "img": "https://image.freepik.com/free-photo/nature-design-with-bokeh-effect_1048-1882.jpg",
+            "sref": "catalog"
+        }
+    },
+    "news": {
+        "title": "Новости и акции",
+        "btnText": "Все новости",
+        "sref": "index",
+        "items": [
+            {
+                "date": "29 января 2017",
+                "link": "#",
+                "summary": "Киберпонедельник!<br> 07 февраля скидки до 70%"
+            },
+            {
+                "date": "9 января 2017",
+                "link": "#",
+                "summary": "Беговые лыжи Madshus — выбор легенды биатлона Уле-Эйнара"
+            },
+            {
+                "date": "29 декабря 2017",
+                "link": "#",
+                "summary": "Цены пополам! Зимний марафон распродаж, скидки до 50%"
+            },
+            {
+                "date": "21 декабря 2017",
+                "link": "#",
+                "summary": "График работы в Новогодние праздники!"
+            }
+        ]
+    }
   }
 }
