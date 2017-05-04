@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" ng-cloak>
     <div class="container_padded">
         <div class="footer__subs">
             <div layout="row" layout-align="space-between center ">
@@ -6,7 +6,7 @@
                     <div class="footer__subs-text" >За подписку на новости "Бренда" дарим скидку 5%</div>
                 </div>
                 <div flex="50">
-                    <div class="footer__subs-box"></div>
+                    <md-button class="footer__subs-btn md-raised md-primary" art-mailing-subs-dir ng-click="showSubsPopup()">{{'Subscribe'| translate}}</md-button>
                 </div>
             </div>
         </div>
@@ -40,7 +40,6 @@
                                         <a class="footer__menu-link footer__menu-link_l"
                                             ui-sref="{{ (department.sref)? department.sref : 'index' }}( {{department.srefParams}})"
                                             ui-sref-opts="{reload: true}"
-                                            {#ui-sref-active-eq="md-hue-2"#}
                                             href="{{department.href}}"
                                             ng-bind-html="department.name | html"
                                             ></a>
@@ -50,7 +49,6 @@
                                             md-ink-ripple="false"
                                             ui-sref="{{(category.sref)? category.sref : 'index' }}({{category.srefParams}})"
                                             ui-sref-opts="{reload: true}"
-                                            {#ui-sref-active-eq="md-hue-2"#}
                                             href="{{category.href}}"
                                             ng-bind-html="category.name | html"
                                             ></a>
@@ -71,7 +69,6 @@
                                         <a class="footer__menu-link footer__menu-link_l"
                                         ui-sref="{{ (item.sref)? item.sref : 'index' }}( {{item.srefParams}})"
                                         ui-sref-opts="{reload: true}"
-                                        {#ui-sref-active-eq="md-hue-2"#}
                                         href="{{item.href}}"
                                         ng-bind-html="item.name | html"
                                         ></a>
@@ -81,7 +78,6 @@
                                             md-ink-ripple="false"
                                             ui-sref="{{(item.sref)? item.sref : 'index' }}({{item.srefParams}})"
                                             ui-sref-opts="{reload: true}"
-                                            {#ui-sref-active-eq="md-hue-2"#}
                                             href="{{item.href}}"
                                             ng-bind-html="item.name | html"
                                             ></a>

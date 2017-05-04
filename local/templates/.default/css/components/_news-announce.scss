@@ -1,0 +1,24 @@
+@import '../variables';
+@import '../mixins';
+@import '../functions';
+
+$pad: 15px;
+
+.news-announce {
+
+    &__date {
+        display: inline-block;
+        padding: 0 $pad;
+        color: $regent-gray;
+        line-height: 2;
+        background: $porcelain;
+    }
+
+    &__summary {
+        @include link-text();
+
+        margin: $pad 0 0 $pad;
+        display: block;
+        font-size: $fslg;
+    }
+}

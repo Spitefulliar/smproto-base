@@ -1,0 +1,15 @@
+<div class="news-announce-list" ng-cloak >
+    <h3 class="news-announce-list__heading" ng-bind-html="news.title | html"></h3>
+    <div class="news-announce-list__grid" layout="row" layout-align="space-between start">
+        <div class="news-announce-list__cell"
+           ng-repeat="item in news.items track by $index">
+           <div class="news-announce">
+               <time class="news-announce__date" datetime="{{tem.date}}" ng-bind-html="item.date | html"></time>
+               <a ng-href="{{item.link}}" class="news-announce__summary" ng-bind-html="item.summary | html"></a>
+           </div>
+        </div>
+    </div>
+    <md-button ng-if="news.btnText" class="news-announce-list__btn md-primary md-raised" aria-label="{{news.btnText}}" ui-sref="{{news.sref}}">
+        <span ng-bind-html="news.btnText | html"></span>
+    </md-button>
+</div>
