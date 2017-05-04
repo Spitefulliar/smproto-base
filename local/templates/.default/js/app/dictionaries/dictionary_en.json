@@ -69,5 +69,22 @@
   "Русский": "Russian",
   "Английский": "English",
   "Not found": "Not found",
-  "Subscribe": "Subscribe"
+  "Subscribe": "Subscribe",
+  "fieldError": {
+      "required": "Field is required",
+      "phone": {
+          "minlength": "Number is too short",
+          "maxlength": "Number is too long"
+      }
+  },
+  "Sex": "Sex",
+  "Name": "Name",
+  "Email address": "Email address",
+  "Phone": "Phone",
+  "Date of birth": "Date of birth",
+  "Day": "Day",
+  "Month": "Month",
+  "Year": "Year",
+  "Male": "Male",
+  "Female": "Female"
 }

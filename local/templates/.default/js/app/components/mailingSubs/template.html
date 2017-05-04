@@ -1,4 +1,57 @@
-<div class="mailing-subs" md-whiteframe="3">
-    <h1>Mailing popup</h1>
+<div class="mailing-subs" md-whiteframe="4">
+    <div class="mailing-subs__close svg-icon" ng-click="close()" >
+        <svg>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#spr-cross"></use>
+        </svg>
+    </div>
+    <h2  class="mailing-subs__title" ng-bind-html="mailingPopupData.title | html"></h2>
+    <p class="mailing-subs__desc" ng-bind-html="mailingPopupData.descripton | html"></p>
+    <form class="mailing-subs__form" name="subsForm" layout="column" layout-align="start stretch">
+        <md-input-container flex="100" class="mailing-subs__input-container md-primary" md-no-float>
+            <label ng-bind-html="mailingPopupData.fields.name.label | translate | html" ></label>
+            <input type="text" name="name" ng-model="name" required >
+            <div ng-messages="subsForm.name.$error" ng-show="subsForm.name.$dirty">
+                <div ng-message="required" ng-bind-html="mailingPopupData.fields.name.error.required | translate | html" ></div>
+            </div>
+        </md-input-container>
+        <md-input-container flex="100" class="mailing-subs__input-container md-primary" md-no-float>
+            <label ng-bind-html="mailingPopupData.fields.email.label | translate | html"></label>
+            <input type="email" name="email" ng-model="email" required>
+            <div ng-messages="subsForm.email.$error" ng-show="subsForm.email.$dirty">
+                <div ng-message="required" ng-bind-html="mailingPopupData.fields.email.error.required | translate | html" ></div>
+            </div>
+        </md-input-container>
+        <md-input-container flex="100" class="mailing-subs__input-container md-primary" md-no-float>
+            <label ng-bind-html="mailingPopupData.fields.phone.label | translate | html"></label>
+            <input type="text" name="phone" ng-model="phone" >
+        </md-input-container>
 
+        <p ng-bind-html="mailingPopupData.fields.sex.label | translate | html" ></p>
+        <md-radio-group ng-model="sex" layout="row" layout-align="start start">
+            <md-radio-button ng-repeat="option in mailingPopupData.fields.sex.options" ng-value="option.value" aria-label="{{ option.label }}" >
+                <span ng-bind-html="option.label | translate | html"></span>
+            </md-radio-button>
+        </md-radio-group>
+
+        <p ng-bind-html="mailingPopupData.fields.dateOfBirth.label | translate | html"></p>
+        <div layout="row" layout-align="start space-between">
+            <md-input-container class="mailing-subs__input-container md-primary" md-no-float>
+                <input type="number" name="dateOfBirthDay" ng-model="dateOfBirthDay" placeholder="{{mailingPopupData.fields.dateOfBirth.fields.day.label | translate}}">
+            </md-input-container>
+            <md-input-container class="mailing-subs__input-container md-primary" md-no-float>
+                <input type="number" name="dateOfBirthMonth" ng-model="dateOfBirthMonth"  placeholder="{{mailingPopupData.fields.dateOfBirth.fields.month.label | translate}}">
+            </md-input-container>
+            <md-input-container class="mailing-subs__input-container md-primary" md-no-float>
+                <input type="number" name="dateOfBirthYear" ng-model="dateOfBirthYear"  placeholder="{{mailingPopupData.fields.dateOfBirth.fields.year.label | translate}}">
+            </md-input-container>
+        </div>
+
+        <md-checkbox  class="md-primary" ng-model="isChecked" aria-label="{{mailingPopupData.fields.policy.label| html}}">
+            <span ng-bind-html="mailingPopupData.fields.policy.label | html"></span>
+        </md-checkbox>
+
+        <md-button class="md-raised md-primary" ng-click="submit()" aria-label="{{mailingPopupData.btnText | translate}}">
+            <span ng-bind-html="mailingPopupData.btnText | translate | html"></span>
+        </md-button>
+    </form>
 </div>
